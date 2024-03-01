@@ -1,0 +1,58 @@
+nav {
+    background: hsl(155, 67%, 43%);
+    height: 3rem;
+}
+
+.navbarContainer {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+h1 {
+    grid-column: 1 / 2;
+    color: rgb(28, 28, 28);
+    font-size: 2rem;
+}
+
+.navbarLinks {
+    grid-column: -2 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    height: 100%;
+    align-items: center;
+    list-style: none;
+}
+
+.navbarLinks li {
+    height: 100%;
+}
+
+.navbarLinks li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    padding: 0 20px;
+    color: hsl(0, 0%, 11%);
+}
+
+.navbarLinks li a:hover {
+    color: hsl(155, 67%, 43%);
+    background: white;
+}
+
+.bars {
+    font-size: 24px;
+    color: hsl(0, 0%, 11%);
+    margin-left: 1rem;
+    display: none;
+}
+
+.bars:hover {
+    cursor: pointer;
+}

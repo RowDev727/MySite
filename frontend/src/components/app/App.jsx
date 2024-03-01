@@ -1,23 +1,29 @@
-import './App.css'
-import { useState, useEffect } from 'react'
+// Custom Style Imports
+import styles from './App.module.css'
+
+// Custom Page Imports
+import Home from '../../pages/home/Home'
+
+// Custom Component Imports
+import Navbar from '../navbar/Navbar'
+
+// Dependencies
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
 
 function App() {
-
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-
-  useEffect(() => {
-    fetch('api/get_user_by_id/3').then(res => res.json()).then(data => {
-      setName(data.name)
-      setEmail(data.email)
-    })
-  }, [])
-
   return (
-    <div className="app-container">
-      <p>Name: {name}</p>
-      <p>Email: {email}</p>
-    </div>
+  <div className={styles.appContainer}>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Home/>}></Route>
+        <Route path='/home' element={<Home/>}></Route>
+        <Route path='/services' element={<Home/>}></Route>
+        <Route path='/contact' element={<Home/>}></Route>
+      </Routes>
+    </BrowserRouter>
+  </div>
   )
 }
 
