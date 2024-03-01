@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_restx import Api, Resource
 from .config import DevConfig
-from .extensions import api, db, migrate
+from .extensions import api, db, migrate, cors
 
 def create_app(config_class=DevConfig):
     # Initialize flask app
@@ -14,6 +14,8 @@ def create_app(config_class=DevConfig):
     api.init_app(app)
     db.init_app(app)
     migrate.init_app(app, db)
+    cors.init_app(app)
+    
     
     # Import Blueprints
     from backend.api.api import api_bp
