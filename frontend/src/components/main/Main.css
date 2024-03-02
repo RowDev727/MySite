@@ -5,12 +5,21 @@
 }
 
 :root {
-  --container-width-lg: 90%
+  --color-primary-green: hsl(161, 100%, 44%);
+  --color-primary-dark: hsl(120, 100%, 1%);
+  --color-grey-100: hsl(202, 22%, 90%);
+  --color-grey-300: hsl(0, 0%, 45%);
+
+  --container-width-lg: 80%
 }
 
 html {
   font-size: 16px;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+  background: var(--color-primary-dark);
 }
 
 .container {

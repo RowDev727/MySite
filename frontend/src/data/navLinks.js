@@ -5,11 +5,11 @@ export const navLinks = [
         path: '/home'
     },
     {
-        name: "Services",
-        path: '/services'
+        name: "Projects",
+        path: '/projects'
     },
     {
-        name: "Contact",
-        path: 'contact'
+        name: "Services",
+        path: '/services'
     }
 ]

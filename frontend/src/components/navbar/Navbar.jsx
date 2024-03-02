@@ -18,6 +18,7 @@ const Navbar = () => {
                     )
                 })
             }
+            <li><NavLink className={style.contactBtn} to={'/contact'}>Contact</NavLink></li>
         </ul>
         <FaBars className={style.bars}/>
         </div>
