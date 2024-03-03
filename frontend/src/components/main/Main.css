@@ -5,8 +5,10 @@
 }
 
 :root {
+  /* Working primary color: hsl(161, 100%, 44%); */
   --color-primary-green: hsl(161, 100%, 44%);
   --color-primary-dark: hsl(120, 100%, 1%);
+  --color-secondary-dark: hsl(0, 0%, 22%);
   --color-grey-100: hsl(202, 22%, 90%);
   --color-grey-300: hsl(0, 0%, 45%);
 

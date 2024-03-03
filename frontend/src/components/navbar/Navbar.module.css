@@ -42,7 +42,7 @@ h1 {
 
 .navbarLinks li a:hover {
     color: hsl(155, 67%, 43%);
-    background: white;
+    background: var(--color-secondary-dark);
 }
 
 
