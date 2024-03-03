@@ -12,7 +12,8 @@
   --color-grey-100: hsl(202, 22%, 90%);
   --color-grey-300: hsl(0, 0%, 45%);
 
-  --container-width-lg: 80%
+  --container-width-lg: 80%;
+  --page-height: calc(100vh - 4rem); /* 100% height - Navbar height*/
 }
 
 html {
@@ -31,5 +32,6 @@ body {
 }
 
 .page {
-  height: calc(100vh - 4rem); /* Calculation subtracts height from navbar */
+  height: var(--page-height);
 }
+
