@@ -1,6 +1,52 @@
 .infoContainer {
     width: 100%;
-    height: 12rem;
+    color: var(--color-primary-dark);
+    background: white;
+    padding: 2rem;
+}
+
+.infoContainer img {
+    width: 12rem;
+}
+
+.infoSection {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    gap: 5%;
+    align-items: center;
+    justify-content: center;
+}
+
+.title1 {
+    font-size: 1rem;
+    color: var(--color-primary-green);
+    font-weight: 600;
+    padding-bottom: .5rem;
+}
+
+.title2 {
+    font-size: 1.6rem;
+    color: var(--color-primary-dark);
+    font-weight: 600;
+    font-style: bold;
+    padding-bottom: .5rem;
+}
+
+.infoBtn {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: .5rem; 
+    margin-top: 1rem;
+    width: 8rem;
+    color: var(--color-primary-green);
+    background: var(--color-primary-dark);
+    border: 2px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.infoBtn:hover {
+    background: white;
+    color: var(--color-primary-green);
     border: 2px solid var(--color-primary-green);
-    color: var(--color-grey-100);
 }

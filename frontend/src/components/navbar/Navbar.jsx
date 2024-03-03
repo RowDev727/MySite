@@ -1,4 +1,4 @@
-import style from './Navbar.module.css'
+import styles from './Navbar.module.css'
 import { NavLink } from 'react-router-dom'
 import { navLinks } from '../../data/navLinks'
 import { FaBars } from 'react-icons/fa'
@@ -6,9 +6,9 @@ import { FaBars } from 'react-icons/fa'
 const Navbar = () => {
   return (
     <nav>
-        <div className={`${style.navbarContainer} ${'container'}`}>
+        <div className={`${styles.navbarContainer} ${'container'}`}>
         <h1>AllStacks</h1>
-        <ul className={style.navbarLinks}>
+        <ul className={styles.navbarLinks}>
             {
                 navLinks.map(({name, path}, index) => {
                     return (
@@ -18,9 +18,9 @@ const Navbar = () => {
                     )
                 })
             }
-            <li><NavLink className={style.contactBtn} to={'/contact'}>Contact</NavLink></li>
+            <div className={`${styles.btnContainer}`}><NavLink className={styles.contactBtn} to={'/contact'}>Contact Us</NavLink></div>
         </ul>
-        <FaBars className={style.bars}/>
+        <FaBars className={styles.bars}/>
         </div>
     </nav>
     
