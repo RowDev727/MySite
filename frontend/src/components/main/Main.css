@@ -27,3 +27,7 @@ body {
   max-width: 1920px;
   margin-inline: auto;
 }
+
+.page {
+  height: calc(100vh - 4rem); /* Calculation subtracts height from navbar */
+}

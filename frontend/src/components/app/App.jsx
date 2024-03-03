@@ -6,6 +6,7 @@ import Home from '../../pages/home/Home'
 
 // Custom Component Imports
 import Navbar from '../navbar/Navbar'
+import Footer from '../footer/Footer'
 
 // Dependencies
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
@@ -24,6 +25,7 @@ function App() {
         <Route path='/contact' element={<Home/>}></Route>
       </Routes>
     </BrowserRouter>
+    <Footer/>
   </div>
   )
 }

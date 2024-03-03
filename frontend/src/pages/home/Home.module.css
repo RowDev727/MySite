@@ -1,9 +1,51 @@
 .homeContainer {
-    color: white;
+    width: 100%;
+    /* border: 2px solid var(--color-primary-green); */
+    color: var(--color-grey-100);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem 0 2rem;
 }
 
-p {
-    font-weight: 500;
-    font-size: 3rem;
+.title {
+    font-weight: 600;
+    font-style: bold;
+}
+
+.title1 {
+    font-size: 1.3rem;
+    color: var(--color-primary-green);
+}
+
+.title2 {
+    font-size: 4.5rem;
+    color: var(--color-grey-100);
+    padding-top: 1.3rem;
+}
+
+.title3 {
+    font-size: 3.2rem;
+    color: var(--color-grey-100);
+}
+
+.title4 {
+    padding-top: 1rem;
+    font-size: 1.3rem;
     color: var(--color-grey-300);
+}
+
+.getStartedBtn {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: .75rem; 
+    margin-top: 1rem;
+    width: 10rem;
+    color: var(--color-primary-dark);
+    background: var(--color-primary-green);
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
 }

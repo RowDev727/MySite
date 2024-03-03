@@ -1,0 +1,5 @@
+.footerContainer {
+    width: 100%;
+    border: 2px solid var(--color-primary-green);
+    color: var(--color-grey-100);
+}
