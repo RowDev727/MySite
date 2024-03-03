@@ -1,5 +1,4 @@
-.projectContainer {
-    width: 100%;
+.projectsContainer {
     border: 2px solid var(--color-primary-green);
     color: var(--color-grey-100);
 }

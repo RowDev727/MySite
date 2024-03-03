@@ -3,6 +3,9 @@ import styles from './App.module.css'
 
 // Custom Page Imports
 import Home from '../../pages/home/Home'
+import Projects from '../../pages/projects/Projects'
+import Services from '../../pages/services/Services'
+import Contact from '../../pages/contact/Contact'
 
 // Custom Component Imports
 import Navbar from '../navbar/Navbar'
@@ -20,9 +23,9 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}></Route>
         <Route path='/home' element={<Home/>}></Route>
-        <Route path='/projects' element={<Home/>}></Route>
-        <Route path='/services' element={<Home/>}></Route>
-        <Route path='/contact' element={<Home/>}></Route>
+        <Route path='/projects' element={<Projects/>}></Route>
+        <Route path='/services' element={<Services/>}></Route>
+        <Route path='/contact' element={<Contact/>}></Route>
       </Routes>
     </BrowserRouter>
     <Footer/>
