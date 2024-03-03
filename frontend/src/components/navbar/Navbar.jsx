@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <nav>
         <div className={`${style.navbarContainer} ${'container'}`}>
-        <h1>CHRIS.</h1>
+        <h1>AllStacks</h1>
         <ul className={style.navbarLinks}>
             {
                 navLinks.map(({name, path}, index) => {
