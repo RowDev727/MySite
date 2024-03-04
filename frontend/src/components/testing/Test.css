@@ -1,0 +1,5 @@
+.test-container {
+    border: 2px solid var(--color-primary-green);
+    background: white;
+    height: 8rem;
+}
