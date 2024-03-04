@@ -17,16 +17,16 @@ const Navbar = () => {
                     navLinks.map(({name, path}, index) => {
                         return (
                             <li key={index}>
-                                <NavLink to={path} className={({isActive}) => isActive ? `${styles.activeNav}` : ''}>{name}</NavLink>
+                                <NavLink to={path} className={({isActive}) => isActive ? `${styles.activeNav}` : ''} onClick={() => setNavShowing(prev => !prev)}>{name}</NavLink>
                             </li>
                         )
                     })
                 }
                 <div className={`${styles.btnContainer}`}>
-                    <NavLink className={styles.contactBtn} to={'/contact'}>Contact Us</NavLink>
+                    <NavLink className={styles.contactBtn} to={'/contact'} onClick={() => setNavShowing(prev => !prev)}>Contact Us</NavLink>
                 </div>
             </ul>
-            <button className={styles.navToggleBtn} onClick={() => setNavShowing(!navShowing)}>
+            <button className={styles.navToggleBtn} onClick={() => setNavShowing(prev => !prev)}>
                 {
                     navShowing ? <MdOutlineClose /> : <FaBars />
                 }
