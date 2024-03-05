@@ -15,8 +15,7 @@ function Test() {
 
   return (
     <div className="test-container">
-      <p>Name: {name}</p>
-      <p>Email: {email}</p>
+      <h1>TODO...</h1>
     </div>
   )
 }

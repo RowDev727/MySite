@@ -2,4 +2,7 @@
     border: 2px solid var(--color-primary-green);
     background: white;
     height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

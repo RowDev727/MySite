@@ -40,7 +40,7 @@ const Footer = () => {
             <ul>
               <li><a href="#">Claim</a></li>
               <li><a href="#">Privacy</a></li>
-              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Terms</a></li>
               <li><a href="#">Privacy Policy</a></li>
             </ul>
         </div>
