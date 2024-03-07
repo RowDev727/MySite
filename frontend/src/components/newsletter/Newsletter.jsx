@@ -10,7 +10,7 @@ const Newsletter = () => {
         </div>
         <div className={`${styles.newsletterRight}`}>
           <div className={`${styles.newsletterTop}`}>
-            <input type='text'></input>
+            <input type='text' placeholder='E-Mail Address'></input>
             <button>Notify Me</button>
           </div>
           <div className={`${styles.newsletterBottom}`}>

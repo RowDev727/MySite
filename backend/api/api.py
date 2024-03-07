@@ -5,8 +5,13 @@ from ..models import User
 api = Blueprint('api', __name__)
 
 
+@api.route('/api/contact', methods=['GET'])
+def get_contact():
+    contact = User.query.filter_by(id=3).first()
+    return {'user': contact.name, 'email': contact.email}
+
 @api.route('/api/contacts', methods=['GET'])
-def get():
+def get_contacts():
     contacts = User.query.all()
     json_contacts = list(map(lambda contact: contact.to_json(), contacts))
     return jsonify({"contacts": json_contacts})

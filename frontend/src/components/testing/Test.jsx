@@ -7,15 +7,16 @@ function Test() {
   const [email, setEmail] = useState('')
 
   useEffect(() => {
-    fetch('api/get_user_by_id/3').then(res => res.json()).then(data => {
-      setName(data.name)
+    fetch('api/contact').then(res => res.json()).then(data => {
+      setName(data.user)
       setEmail(data.email)
     })
   }, [])
 
   return (
     <div className="test-container">
-      <h1>TODO...</h1>
+      <h1>Name: {name}</h1>
+      <h1>Email: {email}</h1>
     </div>
   )
 }
