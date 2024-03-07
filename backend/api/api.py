@@ -1,21 +1,33 @@
-from flask import Blueprint
-from flask_restx import Resource
-from ..extensions import api, db
+from flask import Blueprint, jsonify, request
+from ..extensions import db
 from ..models import User
 
-api_bp = Blueprint('api', __name__)
+api = Blueprint('api', __name__)
 
 
-@api.route('/api/get_user_by_id/<id>')
-class Get_User_By_Id(Resource):
-    def get(self, id):
-        user = User.query.filter_by(id=id).first()
-        return {"name": user.name, "email": user.email} if user else {"name": "none"}
+@api.route('/api/contacts', methods=['GET'])
+def get():
+    contacts = User.query.all()
+    json_contacts = list(map(lambda contact: contact.to_json(), contacts))
+    return jsonify({"contacts": json_contacts})
     
-@api.route('/api/create_user/<name>/<email>')
-class Create_User(Resource):
-    def get(self, name, email):
-        user = User(name=name, email=email)
-        db.session.add(user)
+@api.route('/api/create_contact', methods=['POST'])
+def create_contact():
+    name = request.json.get('name')
+    email = request.json.get('email')
+    
+    if not name or not email:
+        return (
+            jsonify({'message': 'You must include a name and email'}), 400
+        )
+        
+    new_contact = User(name=name, email=email)
+    
+    try:
+        db.session.add(new_contact)
         db.session.commit()
-        return {"name": user.name, "email": user.email}
+    except Exception as e:
+        return jsonify({'message': str(e)}), 400
+    
+    return jsonify({'message': 'Contact Created!'}), 201
+        

@@ -5,7 +5,10 @@ class User(db.Model):
     name = db.Column(db.String(50))
     email = db.Column(db.String(50))
     
-    def __init__(self, name, email):
-        self.name = name
-        self.email = email
+    def to_json(self):
+        return {
+            "id": self.id,
+            "name": self.name,
+            "email": self.email
+        }
         
