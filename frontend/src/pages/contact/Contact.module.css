@@ -1,4 +1,6 @@
-.contactContainer {
-    border: 2px solid var(--color-primary-green);
+.contactPageContainer {
+    /* border: 2px solid var(--color-primary-green); */
     color: var(--color-grey-100);
+    height: calc(100vh - 4rem);
 }
+
