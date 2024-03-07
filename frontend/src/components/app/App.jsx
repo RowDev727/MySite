@@ -13,6 +13,7 @@ import Footer from '../footer/Footer'
 
 // Dependencies
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Newsletter from '../newsletter/Newsletter'
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path='/contact' element={<Contact/>}></Route>
       </Routes>
     </BrowserRouter>
+    <Newsletter />
     <Footer/>
   </div>
   )

@@ -47,6 +47,12 @@
     width: 6rem;
 }
 
+.newsletterTop button:hover {
+    color: var(--color-primary-green);
+    background: var(--color-primary-dark);
+    border: 2px solid var(--color-primary-green);
+}
+
 .newsletterBottom {
     justify-content: start;
     align-items: start;
@@ -56,3 +62,4 @@
     color: var(--color-primary-green);
     font-size: 1rem;
 }
+
