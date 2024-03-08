@@ -1,12 +1,14 @@
 .newsletterContainer {
     color: white;
+    height: 12rem;
+    display: grid;
+    align-items: center;
 }
 
 .newsletter {
     display: grid;
     grid-template-columns: 2fr 1fr;
     align-items: baseline;
-    margin: 4rem;
     gap: 2rem;
 
 }

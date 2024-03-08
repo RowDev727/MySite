@@ -2,6 +2,11 @@ import styles from './Contact.module.css'
 import Newsletter from '../../components/newsletter/Newsletter'
 import { useState } from 'react'
 import { object, string } from 'yup'
+import { FaEnvelope } from 'react-icons/fa'
+import { FaPhoneVolume } from 'react-icons/fa6'
+import { FaLocationDot } from 'react-icons/fa6'
+import { FaEnvelopeOpenText } from 'react-icons/fa6'
+import Test from '../../components/testing/Test'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -70,46 +75,67 @@ const Contact = () => {
     <>
       <div className={`${styles.contactPageContainer}`}>
         <div className={`${styles.contactFormContainer} container`}>
-          <form className={`${styles.contactForm}`} onSubmit={handleSubmit}>
-            <div className={`${styles.contactFormGroup}`}>
-              <label className={`${styles.contactFormLabel}`}>Name:</label>
-              <input 
-                className={`${styles.contactFormInput}`} 
-                type='text'
-                name='name'
-                value={formData.name}
-                placeholder='Enter your name'
-                onChange={handleChange} />
-                {errors.name && <div className={`${styles.contactFormError}`}>{errors.name}</div>}
+          <div className={`${styles.contactHeading}`}>
+            <h3>Contact Us</h3>
+            <h1>Get in Touch</h1>
+          </div>
+          <div className={`${styles.contactFormBody}`}>
+            <div className={`${styles.contactLeft}`}>
+              <h2 className={`${styles.contactLeftTitle}`}>Send us a message<FaEnvelopeOpenText/></h2>
+              <p className={`${styles.contactLeftText}`}>Feel free to reach out through contact form or find our contact information below.  Your feedback, questions and suggestions are important to us as we strive to provide exceptional service to our community and customers.</p>
+              <ul>
+                <li className={`${styles.contactLeftInfo}`}><FaEnvelope/><p className={`${styles.contactLeftInfoText}`}>Contact@AllStack.com</p></li>
+                <li className={`${styles.contactLeftInfo}`}><FaPhoneVolume/><p className={`${styles.contactLeftInfoText}`}>+1-555-5555</p></li>
+                <li className={`${styles.contactLeftInfo}`}><FaLocationDot/><p className={`${styles.contactLeftInfoText}`}>77 Messachusetts Ave, Cambridge Ma 02139, United States</p></li>
+              </ul>
             </div>
-            <div className={`${styles.contactFormGroup}`}>
-              <label className={`${styles.contactFormLabel}`}>Email:</label>
-              <input
-                className={`${styles.contactFormInput}`} 
-                type='text'
-                name='email'
-                value={formData.email}
-                placeholder='Enter your e-mail'
-                onChange={handleChange} />
-                {errors.email && <div className={`${styles.contactFormError}`}>{errors.email}</div>}
+            <div className={`${styles.contactRight}`}>
+              <form className={`${styles.contactForm}`} onSubmit={handleSubmit}>
+                <div className={`${styles.contactFormGroup}`}>
+                  <label className={`${styles.contactFormLabel}`}>Your Name</label>
+                  <input 
+                    className={`${styles.contactFormInput}`} 
+                    type='text'
+                    name='name'
+                    value={formData.name}
+                    placeholder='Enter your name'
+                    onChange={handleChange} />
+                    {errors.name && <div className={`${styles.contactFormError}`}>{errors.name}</div>}
+                </div>
+                <div className={`${styles.contactFormGroup}`}>
+                  <label className={`${styles.contactFormLabel}`}>E-mail Address</label>
+                  <input
+                    className={`${styles.contactFormInput}`} 
+                    type='text'
+                    name='email'
+                    value={formData.email}
+                    placeholder='Enter your e-mail'
+                    onChange={handleChange} />
+                    {errors.email && <div className={`${styles.contactFormError}`}>{errors.email}</div>}
+                </div>
+                <div className={`${styles.contactFormGroup}`}>
+                  <label className={`${styles.contactFormLabel}`}>Message</label>
+                  <textarea 
+                    className={`${styles.contactFormInput} ${styles.contactFormInputTextarea}`}
+                    name='message'
+                    rows='6'
+                    placeholder='Enter your message'
+                    onChange={handleChange}>
+                  </textarea>
+                  {errors.message && <div className={`${styles.contactFormError}`}>{errors.message}</div>}
+                </div>
+                <button className={`${styles.contactFormSubmitBtn}`} type='submit'>Submit</button>
+                {formValid && <div className={`${styles.contactFormStatus}`}>Form Submitted!</div>}
+              </form>
             </div>
-            {/* <div className={`${styles.contactFormGroup}`}>
-              <label className={`${styles.contactFormLabel}`}>Message:</label>
-              <textarea 
-                className={`${styles.contactFormTextarea}`}
-                name='message'
-                rows='6'
-                placeholder='Enter your message'
-                onChange={handleChange}>
-              </textarea>
-              {errors.message && <div className={`${styles.contactFormError}`}>{errors.message}</div>}
-            </div> */}
-            <button className={`${styles.contactFormSubmitBtn}`} type='submit'>Submit</button>
-            {formValid && <div className={`${styles.contactFormStatus}`}>Form Submitted!</div>}
-          </form>
+          </div>
+          
+          
+          
+          
         </div>
       </div>
-      <div><Newsletter /></div>
+      <div><Test/></div>
     </>
   )
 }

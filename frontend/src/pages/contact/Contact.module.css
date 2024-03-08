@@ -2,5 +2,125 @@
     /* border: 2px solid var(--color-primary-green); */
     color: var(--color-grey-100);
     height: calc(100vh - 4rem);
+    /* background: var(--color-grey-100); */
 }
 
+.contactFormContainer {
+    padding: 2rem;    
+}
+
+.contactHeading {
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.contactHeading h3 {
+    font-size: 2rem;
+}
+
+.contactHeading h1 {
+    font-size: 3rem;
+}
+
+.contactLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    padding-top: .5rem;
+}
+
+.contactFormBody {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.contactLeft svg {
+    color: var(--color-primary-green);
+    font-size: 2rem;
+}
+
+.contactLeftTitle {
+    color: var(--color-primary-green);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.contactLeftTitle svg {
+    margin-left: 1rem;
+    font-size: 2rem;
+}
+
+.contactLeftText {
+    margin-bottom: 1rem;
+    width: 80%;
+}
+
+.contactLeftInfo {
+    margin-bottom: .5rem;
+    display: flex;
+    align-items: center;
+}
+
+.contactLeftInfoText {
+    margin-left: 1rem;
+    width: 60%;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.contactFormGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    width: 100%;
+    
+}
+
+.contactFormError {
+    color: red;
+}
+
+.contactFormLabel {
+    margin-bottom: .25rem;
+}
+
+.contactFormSubmitBtn {
+    border-radius: 6px;
+    outline: none;
+    border: 2px solid transparent;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-primary-dark);
+    background: var(--color-primary-green);
+    width: 6rem;
+    font-weight: 600;
+}
+
+.contactFormSubmitBtn:hover {
+    color: var(--color-primary-green);
+    background: var(--color-primary-dark);
+    border: 2px solid var(--color-primary-green);
+}
+
+.contactFormInput {
+    padding: .5rem;
+    border-radius: 6px;
+    outline: none;
+    border: 2px solid transparent;
+    height: 2rem;
+}
+
+.contactFormInputTextarea {
+    height: 8rem;
+    resize: none;
+}
