@@ -6,17 +6,17 @@ import { object, string } from 'yup'
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
-    message: ""
+    email: ""
   })
 
   const [errors, setErrors] = useState({})
+  const [formValid, setFormValid ] = useState(false)
 
   const validationSchema = object({
     name: string().required('Please enter a name'),
     email: string().email().required('Please enter an e-mail'),
-    message: string().required('Please enter a message')
   })
+
 
   const handleSubmit = async (e) => {
     // Prevent Refresh
@@ -25,6 +25,26 @@ const Contact = () => {
     try {
       await validationSchema.validate(formData, {abortEarly:false})
       console.log('Form Submitted', formData)
+      console.log(`Name: ${formData.name}`)
+      // Send data to backend
+      const data = {
+        name: formData.name,
+        email: formData.email
+      }
+      const options = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+      }
+      const response = await fetch('/api/create_contact', options)
+      setFormData({
+        name: '',
+        email: ''
+      })
+      setFormValid(true)
+
     } catch (error) {
       // Push any errors to newErrors object
       const newErrors = {}
@@ -34,6 +54,7 @@ const Contact = () => {
       // Show errors in dom
       setErrors(newErrors)
     }
+    
   }
 
   const handleChange = (e) => {
@@ -72,7 +93,7 @@ const Contact = () => {
                 onChange={handleChange} />
                 {errors.email && <div className={`${styles.contactFormError}`}>{errors.email}</div>}
             </div>
-            <div className={`${styles.contactFormGroup}`}>
+            {/* <div className={`${styles.contactFormGroup}`}>
               <label className={`${styles.contactFormLabel}`}>Message:</label>
               <textarea 
                 className={`${styles.contactFormTextarea}`}
@@ -82,8 +103,9 @@ const Contact = () => {
                 onChange={handleChange}>
               </textarea>
               {errors.message && <div className={`${styles.contactFormError}`}>{errors.message}</div>}
-            </div>
+            </div> */}
             <button className={`${styles.contactFormSubmitBtn}`} type='submit'>Submit</button>
+            {formValid && <div className={`${styles.contactFormStatus}`}>Form Submitted!</div>}
           </form>
         </div>
       </div>

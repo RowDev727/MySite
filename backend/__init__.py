@@ -11,7 +11,7 @@ def create_app(config_class=DevConfig):
     
     # Initialize restx api object
     db.init_app(app)
-    migrate.init_app(app, db)
+    migrate.init_app(app, db, render_as_batch=True)
     cors.init_app(app)
     
     
