@@ -28,3 +28,13 @@
 .col a {
     text-decoration: none;
 }
+
+/* Medium and Small Screens */
+@media screen and (max-width: 1024px) {
+    .footerSection {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        text-align: center;
+    }
+}
