@@ -42,6 +42,8 @@
 .newsletterTop {
     display: flex;
     gap: .5rem;
+    margin-bottom: .5rem;
+    align-items: center;
 }
 
 .newsletterTop input {
