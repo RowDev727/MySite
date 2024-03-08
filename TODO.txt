@@ -1,5 +1,4 @@
 - Clean up html classes in contact component
 - Factor buttons out to own component
-- Apply props to newsletter compenent for light/dark theme
 - Styles page
 - Footer Text

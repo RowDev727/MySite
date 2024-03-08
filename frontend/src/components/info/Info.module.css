@@ -23,6 +23,10 @@
     align-items: center;
 }
 
+.infoRight {
+    display: grid;
+}
+
 .title1 {
     font-size: 1rem;
     color: var(--color-primary-green);
@@ -49,6 +53,8 @@
     border: 2px solid transparent;
     border-radius: 6px;
     cursor: pointer;
+    text-decoration: none;
+    text-align: center;
 }
 
 .infoBtn:hover {

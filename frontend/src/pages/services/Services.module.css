@@ -1,4 +1,13 @@
-.servicesContainer {
-    border: 2px solid var(--color-primary-green);
+.servicesPageContainer {
+    /* border: 2px solid var(--color-primary-green); */
     color: var(--color-grey-100);
+    height: calc(100vh - 4rem);
+    text-align: center;
+    
+}
+
+.servicesContainer {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    padding: 2rem;
 }

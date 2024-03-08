@@ -11,7 +11,8 @@ import Test from '../../components/testing/Test'
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
-    email: ""
+    email: "",
+    message: ""
   })
 
   const [errors, setErrors] = useState({})
@@ -46,7 +47,8 @@ const Contact = () => {
       const response = await fetch('/api/create_contact', options)
       setFormData({
         name: '',
-        email: ''
+        email: '',
+        message: ''
       })
       setFormValid(true)
 
@@ -118,6 +120,7 @@ const Contact = () => {
                   <textarea 
                     className={`${styles.contactFormInput} ${styles.contactFormInputTextarea}`}
                     name='message'
+                    value={formData.message}
                     rows='6'
                     placeholder='Enter your message'
                     onChange={handleChange}>
@@ -125,7 +128,7 @@ const Contact = () => {
                   {errors.message && <div className={`${styles.contactFormError}`}>{errors.message}</div>}
                 </div>
                 <button className={`${styles.contactFormSubmitBtn}`} type='submit'>Submit</button>
-                {formValid && <div className={`${styles.contactFormStatus}`}>Form Submitted!</div>}
+                {formValid && <div className={`${styles.contactFormStatus}`}>Message Sent!</div>}
               </form>
             </div>
           </div>
