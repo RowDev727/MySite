@@ -3,6 +3,15 @@
     height: 12rem;
     display: grid;
     align-items: center;
+    border: blue;
+}
+
+.newsletterContainerDark {
+    background: var(--color-primary-dark);
+}
+
+.newsletterContainerLight {
+    background: var(--color-grey-100);
 }
 
 .newsletter {
@@ -10,11 +19,18 @@
     grid-template-columns: 2fr 1fr;
     align-items: baseline;
     gap: 2rem;
-
 }
 
 .newsletterLeft .title {
-    color: white;
+    color: var(--color-primary-green);
+}
+
+.newsletterLeft .textLight {
+    color: var(--color-primary-dark);
+}
+
+.newsletterLeft .textDark {
+    color: var(--color-grey-100);
 }
 
 .newsletterRight {
@@ -36,6 +52,11 @@
     height: 2rem;
 }
 
+.newsletterTopLight input{
+    border: 2px solid var(--color-primary-dark);
+
+}
+
 .newsletterTop button {
     border-radius: 6px;
     outline: none;
@@ -47,6 +68,7 @@
     color: var(--color-primary-dark);
     background: var(--color-primary-green);
     width: 6rem;
+    font-weight: 600;
 }
 
 .newsletterTop button:hover {
@@ -55,13 +77,26 @@
     border: 2px solid var(--color-primary-green);
 }
 
+.newsletterTop .btnDark {
+    color: var(--color-primary-green);
+    background: var(--color-primary-dark);
+}
+
+.newsletterTop .btnDark:hover {
+    background: var(--color-grey-100);
+    border: 2px solid var(--color-primary-green);
+}
+
 .newsletterBottom {
     justify-content: start;
     align-items: start;
+}
+
+.textDark {
+    color: var(--color-primary-dark);
 }
 
 .newsletterBottom a {
     color: var(--color-primary-green);
     font-size: 1rem;
 }
-

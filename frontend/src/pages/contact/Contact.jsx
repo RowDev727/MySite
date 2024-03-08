@@ -84,9 +84,9 @@ const Contact = () => {
               <h2 className={`${styles.contactLeftTitle}`}>Send us a message<FaEnvelopeOpenText/></h2>
               <p className={`${styles.contactLeftText}`}>Feel free to reach out through contact form or find our contact information below.  Your feedback, questions and suggestions are important to us as we strive to provide exceptional service to our community and customers.</p>
               <ul>
-                <li className={`${styles.contactLeftInfo}`}><FaEnvelope/><p className={`${styles.contactLeftInfoText}`}>Contact@AllStack.com</p></li>
+                <li className={`${styles.contactLeftInfo}`}><FaEnvelope/><p className={`${styles.contactLeftInfoText}`}>AllStack@allstack.com</p></li>
                 <li className={`${styles.contactLeftInfo}`}><FaPhoneVolume/><p className={`${styles.contactLeftInfoText}`}>+1-555-5555</p></li>
-                <li className={`${styles.contactLeftInfo}`}><FaLocationDot/><p className={`${styles.contactLeftInfoText}`}>77 Messachusetts Ave, Cambridge Ma 02139, United States</p></li>
+                <li className={`${styles.contactLeftInfo}`}><FaLocationDot/><p className={`${styles.contactLeftInfoText}`}>111 Main Street, Tampa FL 33121, United States</p></li>
               </ul>
             </div>
             <div className={`${styles.contactRight}`}>
@@ -129,13 +129,9 @@ const Contact = () => {
               </form>
             </div>
           </div>
-          
-          
-          
-          
         </div>
       </div>
-      <div><Test/></div>
+      <div><Newsletter theme={'light'}/></div>
     </>
   )
 }
