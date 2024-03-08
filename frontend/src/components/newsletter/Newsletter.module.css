@@ -1,9 +1,9 @@
 .newsletterContainer {
     color: white;
-    height: 12rem;
     display: grid;
     align-items: center;
     border: blue;
+    padding: 2rem 0 2rem 0;
 }
 
 .newsletterContainerDark {
@@ -101,4 +101,20 @@
 .newsletterBottom a {
     color: var(--color-primary-green);
     font-size: 1rem;
+}
+
+/* Medium and Small Screens */
+@media screen and (max-width: 1024px) {
+    .newsletter {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+
+    .newsletterTop {
+        text-align: center;
+    }
 }

@@ -21,6 +21,7 @@ const Contact = () => {
   const validationSchema = object({
     name: string().required('Please enter a name'),
     email: string().email().required('Please enter an e-mail'),
+    message: string().required('Please enter a message')
   })
 
 
@@ -35,7 +36,8 @@ const Contact = () => {
       // Send data to backend
       const data = {
         name: formData.name,
-        email: formData.email
+        email: formData.email,
+        message: formData.message
       }
       const options = {
         method: "POST",
@@ -44,7 +46,7 @@ const Contact = () => {
         },
         body: JSON.stringify(data)
       }
-      const response = await fetch('/api/create_contact', options)
+      const response = await fetch('/api/create_message', options)
       setFormData({
         name: '',
         email: '',
@@ -101,7 +103,8 @@ const Contact = () => {
                     name='name'
                     value={formData.name}
                     placeholder='Enter your name'
-                    onChange={handleChange} />
+                    onChange={handleChange}
+                    autoFocus={true} />
                     {errors.name && <div className={`${styles.contactFormError}`}>{errors.name}</div>}
                 </div>
                 <div className={`${styles.contactFormGroup}`}>
@@ -124,6 +127,7 @@ const Contact = () => {
                     rows='6'
                     placeholder='Enter your message'
                     onChange={handleChange}>
+                      {errors.message && <div className={`${styles.contactFormError}`}>{errors.message}</div>}
                   </textarea>
                   {errors.message && <div className={`${styles.contactFormError}`}>{errors.message}</div>}
                 </div>
