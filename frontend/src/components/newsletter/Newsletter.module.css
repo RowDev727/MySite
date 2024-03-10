@@ -117,4 +117,9 @@
     .newsletterTop {
         text-align: center;
     }
+    
+    .newsletterLeft p {
+        text-align: center;
+    }
+
 }
