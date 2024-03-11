@@ -9,23 +9,14 @@ function Test() {
   // const [message, setMessage] = useState('')
   const [messages, setMessages] = useState([])
 
+  // Fetch Messages from API
   useEffect(() => {
-    //fetchMessages()
     fetch('api/messages').then(res => res.json()).then(data => {
       setMessages(data.messages)
-      console.log(data.messages)
-      console.log(messages)
+
     })
   }, [])
-
-  const fetchMessages = async () => {
-    const response = await fetch('/api/messages')
-    const data = await response.json()
-    console.log(data)
-    console.log(data.messages)
-    setMessages(data.messages)
-    console.log(messages)
-  }
+  // Fetch message by id
   // useEffect(() => {
   //   fetch('api/message/1').then(res => res.json()).then(data => {
   //     setName(data.user)
@@ -37,11 +28,18 @@ function Test() {
   return (
     <div className="test-container">
       <h1>Contacts</h1>
-      {
-        messages.map((message) => (
-          <p>{message.name}</p>
-        ))
-      }
+      <div>
+        {
+          messages.map((message) => (
+            <div className='card'>
+              <p>{message.name}</p>
+              <p>{message.email}</p>
+              <p>{message.message}</p>
+            </div>
+          ))
+        }
+      </div>
+      
 
       
       

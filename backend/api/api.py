@@ -18,6 +18,7 @@ def get_messages():
     messages = Message.query.all()
     json_messages = list(map(lambda message: message.to_json(), messages))
     return jsonify({"messages": json_messages})
+
     
 @api.route('/api/create_message', methods=['POST'])
 def create_message():
