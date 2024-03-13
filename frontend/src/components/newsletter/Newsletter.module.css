@@ -77,6 +77,7 @@
     color: var(--color-primary-green);
     background: var(--color-primary-dark);
     border: 2px solid var(--color-primary-green);
+    cursor: pointer;
 }
 
 .newsletterTop .btnDark {

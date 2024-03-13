@@ -1,0 +1,18 @@
+.faqSectionComponent {
+    background: var(--color-grey-100);
+    padding: 1rem 0 4rem 0;
+}
+
+.faqSectionTitle {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.faqSectionTest {
+    color: red;
+}
+
+.faqSectionContainer > * {
+    margin-top: 1rem;
+}
+

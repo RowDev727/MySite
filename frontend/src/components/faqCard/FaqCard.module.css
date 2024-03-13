@@ -1,0 +1,28 @@
+.faqCardComponent {
+    background: var(--color-grey-100);
+}
+
+.faqCard {
+    border: 2px solid transparent;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 5% 95%;
+    align-items: center;
+
+}
+
+.faqCard h1 {
+    font-size: 3rem;
+    /* border: 1px solid red; */
+    justify-self: center;
+}
+
+.faqCard:hover {
+    cursor: pointer;
+}
+
+.faqCard p {
+    font-size: 1.3rem;
+    /* border: 1px solid blue; */
+}
