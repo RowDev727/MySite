@@ -17,9 +17,19 @@
 .servicesBody {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(1, 1fr);
+    grid-auto-rows: 1fr;
     grid-gap: 2rem;
     margin-top: 2rem;
+}
+
+.servicesTitle {
+    color: var(--color-grey-100);
+    font-size: 2rem;
+}
+
+.servicesSubTitle {
+    color: var(--color-primary-green);
+    font-size: 3rem;
 }
 
 @media screen and (max-width:1024px) {

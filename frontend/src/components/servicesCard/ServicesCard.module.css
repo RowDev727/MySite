@@ -4,6 +4,8 @@
     position: relative;
     background-color: var(--color-grey-100);
     overflow: hidden;
+    margin-top: 2rem;
+    
 }
 
 
@@ -41,4 +43,13 @@
     color: var(--color-primary-dark);
     background: var(--color-primary-green);
     padding: 1rem;
+}
+
+.servicesCardBtn:hover {
+    cursor: pointer;
+    background: var(--color-primary-dark);
+    color: var(--color-primary-green);
+    border: 2px solid var(--color-primary-green);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
 }

@@ -8,7 +8,8 @@ const Services = () => {
     <>
       <div className={`${styles.servicesPageComponent}`}>
         <div className={`${styles.servicesContainer} container`}>
-          <h1 className={`${styles.servicesTitle}`}>Our Services</h1>
+          <h3 className={`${styles.servicesTitle}`}>Our Services</h3>
+          <h1 className={`${styles.servicesSubTitle}`}>What we offer</h1>
           <div className={`${styles.servicesBody}`}>
             {/* Display ServiceCard component for each service in ourServices.js */}
             {
