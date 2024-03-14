@@ -1,13 +1,35 @@
-.servicesPageContainer {
+.servicesPageComponent {
     /* border: 2px solid var(--color-primary-green); */
-    color: var(--color-grey-100);
-    height: calc(100vh - 4rem);
+    min-height: calc(100vh - 4rem);
     text-align: center;
+    background: var(--color-primary-dark);
     
 }
 
 .servicesContainer {
-    margin-top: 4rem;
+    /* margin-top: 4rem; */
     margin-bottom: 4rem;
-    padding: 2rem;
+    padding: 6rem 2rem 2rem 2rem;
+    height: 100%;
+    /* border: 2px solid red; */
+}
+
+.servicesBody {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: 2rem;
+    margin-top: 2rem;
+}
+
+@media screen and (max-width:1024px) {
+    .servicesBody {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width:600px) {
+    .servicesBody {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }

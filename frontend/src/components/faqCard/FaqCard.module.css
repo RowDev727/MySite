@@ -1,16 +1,15 @@
-.faqCardComponent {
+/* .faqCardComponent {
     background: var(--color-grey-100);
-}
+} */
 
 .faqCard {
     border: 2px solid transparent;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 8px;
     display: flex;
-    /* grid-template-columns: 5% 95%; */
-    align-items: center;
-    /* justify-content: flex-start; */
+    align-items: center;  
     gap: 1rem;
+    background: var(--color-grey-100);
 }
 
 .faqCard h1 {

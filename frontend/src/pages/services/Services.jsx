@@ -1,12 +1,22 @@
 import styles from './Services.module.css'
 import Newsletter from '../../components/newsletter/Newsletter'
+import { ourServices } from '../../data/ourServices'
+import ServicesCard from '../../components/servicesCard/ServicesCard'
 
 const Services = () => {
   return (
     <>
-      <div className={`${styles.servicesPageContainer}`}>
+      <div className={`${styles.servicesPageComponent}`}>
         <div className={`${styles.servicesContainer} container`}>
-          <h1>Services</h1>
+          <h1 className={`${styles.servicesTitle}`}>Our Services</h1>
+          <div className={`${styles.servicesBody}`}>
+            {/* Display ServiceCard component for each service in ourServices.js */}
+            {
+                ourServices.map(({icon, title, points}, index) => {
+                    return (<ServicesCard key={index} icon={icon} title={title} points={points}/>)
+                })
+            }
+          </div>
         </div>
       </div>
       <div><Newsletter theme={'light'}/></div>

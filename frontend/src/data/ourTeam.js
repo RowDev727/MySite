@@ -8,7 +8,8 @@ export const ourTeam = [
         name: "John",
         img: "default.jpg",
         description: "John is our senior backend developer!"
-    },{
+    },
+    {
         name: "Alex",
         img: "default.jpg",
         description: "Alex is our senior frontend developer!"

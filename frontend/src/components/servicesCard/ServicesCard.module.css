@@ -1,0 +1,44 @@
+.servicesCard {
+    text-align: center;
+    border-radius: 1rem;
+    position: relative;
+    background-color: var(--color-grey-100);
+    overflow: hidden;
+}
+
+
+.servicesCardBanner {
+    position: absolute;
+    background: var(--color-primary-green);
+    height: 6rem;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.servicesCardIcon {
+    width: 8rem;
+    clip-path: circle(60px at center);
+    margin-top: 2rem;
+}
+
+.servicesCardTitle {
+    font-size: 1.5rem;
+}
+
+.servicesCardPoints {
+    margin: 1rem 2rem;
+    color: var(--color-primary-dark);
+    font-size: .9rem;
+}
+
+.servicesCardBtn {
+    width: 100%;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--color-primary-dark);
+    background: var(--color-primary-green);
+    padding: 1rem;
+}
