@@ -1,0 +1,71 @@
+.aboutPageComponent {
+    min-height: calc(100vh - 4rem);
+    background: var(--color-primary-dark);
+}
+
+.aboutContainer {
+    margin-bottom: 4rem;
+    padding: 6rem 2rem 2rem 2rem;
+    
+}
+
+.aboutRow {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 3rem;
+    /* border: 2px solid red; */
+    margin-top: 2rem;
+}
+
+.aboutTitle {
+    color: var(--color-grey-100);
+    font-size: 2rem;
+    position: relative;
+    text-align: center;
+}
+
+.aboutTitle::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 5px;
+    background: var(--color-primary-green);
+}
+
+.aboutLeftCol {
+    /* border: 2px solid red; */
+    display: grid;
+    padding: 1rem;
+    align-items: space-between;
+
+}
+
+.aboutLeftTitle {
+    font-size: 3rem;
+    color: var(--color-primary-green);
+}
+
+.aboutLeftText {
+    font-size: 1.5rem;
+    color: var(--color-grey-300);
+    margin-top: 1rem;
+}
+
+.aboutRightCol {
+    display: grid;
+}
+
+.aboutRightTitle {
+    font-size: 2rem;
+    color: var(--color-primary-green);
+    margin-bottom: .5rem;
+}
+
+.aboutRightText {
+    font-size: 1rem;
+    color: var(--color-grey-100);
+    margin-bottom: 1rem;
+}
