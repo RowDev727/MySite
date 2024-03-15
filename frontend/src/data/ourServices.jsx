@@ -1,33 +1,38 @@
-import { HiCodeBracket } from "react-icons/hi2"
+import { FaLaptopCode } from 'react-icons/fa'
+import { HiCodeBracket } from 'react-icons/hi2'
+import { MdOutlinePhoneAndroid } from 'react-icons/md'
+import { AiFillApi } from 'react-icons/ai'
+import { BsDatabaseFill } from 'react-icons/bs'
+import { MdShoppingCart } from 'react-icons/md'
 
 export const ourServices = [
     {
-        icon: "",
+        Icon: <FaLaptopCode />,
         title: "UI/UX Design",
         points: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, error."
     },
     {
-        icon: "",
+        Icon: <HiCodeBracket />,
         title: "Web Development",
         points: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, error."
     },
     {
-        icon: "",
+        Icon: <MdOutlinePhoneAndroid />,
         title: "Mobile Development",
         points: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, error."
     },
     {
-        icon: "",
+        Icon: <AiFillApi />,
         title: "API Development",
         points: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, error."
     },
     {
-        icon: "",
+        Icon: <BsDatabaseFill />,
         title: "Database Design",
         points: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, error."
     },
     {
-        icon: "",
+        Icon: <MdShoppingCart />,
         title: "Ecommerce",
         points: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, error."
     }

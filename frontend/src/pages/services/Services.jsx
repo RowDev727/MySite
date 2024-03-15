@@ -1,8 +1,8 @@
 import styles from './Services.module.css'
 import Newsletter from '../../components/newsletter/Newsletter'
-import { ourServices } from '../../data/ourServices'
+import { ourServices } from '../../data/ourServices.jsx'
 import ServicesCard from '../../components/servicesCard/ServicesCard'
-import { HiCodeBracket } from 'react-icons/hi2'
+
 
 const Services = () => {
   return (
@@ -13,8 +13,12 @@ const Services = () => {
           <div className={`${styles.servicesRow}`}>
             {/* Display ServiceCard component for each service in ourServices.js */}
                 {
-                    ourServices.map(({icon, title, points}, index) => {
-                        return (<ServicesCard key={index} icon={<HiCodeBracket/>} title={title} points={points}/>)
+                    ourServices.map(({Icon, title, points}, index) => {
+                        return (
+                          <div key={index}>
+                            <ServicesCard Icon={Icon} title={title} points={points}/>
+                          </div>
+                        )
                     })
                 }
           </div>
