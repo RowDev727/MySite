@@ -1,9 +1,9 @@
-import { FaLaptopCode } from 'react-icons/fa'
+import { FaLaptopCode, FaServer } from 'react-icons/fa'
 import { HiCodeBracket } from 'react-icons/hi2'
-import { MdOutlinePhoneAndroid } from 'react-icons/md'
+import { MdOutlinePhoneAndroid, MdShoppingCart } from 'react-icons/md'
 import { AiFillApi } from 'react-icons/ai'
 import { BsDatabaseFill } from 'react-icons/bs'
-import { MdShoppingCart } from 'react-icons/md'
+import { GrVulnerability } from 'react-icons/gr'
 
 export const ourServices = [
     {
@@ -34,6 +34,16 @@ export const ourServices = [
     {
         Icon: <MdShoppingCart />,
         title: "Ecommerce",
+        points: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, error."
+    },
+    {
+        Icon: <GrVulnerability />,
+        title: "Penetration Testing",
+        points: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, error."
+    },
+    {
+        Icon: <FaServer />,
+        title: "Deployment & Hosting",
         points: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, error."
     }
 ]
