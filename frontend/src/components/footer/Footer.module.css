@@ -27,3 +27,11 @@
 .col a {
     text-decoration: none;
 }
+
+.col a:hover {
+    color: var(--color-primary-green);
+}
+
+.col .text {
+    padding-right: 1rem;
+}

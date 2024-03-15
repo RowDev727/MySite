@@ -11,4 +11,12 @@ export const faqInfo = [
         question: "How does this whole process work?",
         answer: "TODO"
     },
+    {
+        question: "How much do you charge for a website?",
+        answer: "TODO"
+    },
+    {
+        question: "How long will it take from start to end?",
+        answer: "TODO"
+    },
 ]
