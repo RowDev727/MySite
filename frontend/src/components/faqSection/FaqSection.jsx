@@ -1,8 +1,29 @@
 import FaqCard from '../faqCard/FaqCard'
 import styles from './FaqSection.module.css'
 import { faqInfo } from '../../data/faqInfo'
+import { useState } from 'react'
 
 const FaqSection = () => {
+
+  // const [faqs, setFaqs] = useState(faqInfo.map(({question, answer}) => {
+  //   return {
+  //     question: question,
+  //     answer: answer,
+  //     open: false
+  //   }
+  // }))
+
+  // const toggleFAQ = index => {
+  //   setFaqs(faqs.map((faq, i) => {
+  //     if (i === index) {
+  //       faq.open = !faq.open
+  //     } else {
+  //       faq.open = false
+  //     }
+  //     return faq
+  //   }))
+  // }
+
   return (
     <div className={`${styles.faqSectionComponent}`}>
         <div className={`${styles.faqSectionContainer}`}>

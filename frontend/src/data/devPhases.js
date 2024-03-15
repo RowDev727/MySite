@@ -12,7 +12,7 @@ export const devPhases = [
         description: "After your app is built it must be deployed to the internet so that your customers can access it via a domain name (Ex: Google.com).  Our skilled IT professionals can help simplify this process by configuring a cloud server to deploy your app."
     },
     {
-        title: "Revisions:",
+        title: "Conclusion:",
         description: "When the development process is complete, your site will be available to customers all over the world!"
     },
     
