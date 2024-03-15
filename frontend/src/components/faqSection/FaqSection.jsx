@@ -5,13 +5,13 @@ import { useState } from 'react'
 
 const FaqSection = () => {
 
-  // const [faqs, setFaqs] = useState(faqInfo.map(({question, answer}) => {
-  //   return {
-  //     question: question,
-  //     answer: answer,
-  //     open: false
-  //   }
-  // }))
+  const [faqs, setFaqs] = useState(faqInfo.map(({question, answer}) => {
+    return {
+      question: question,
+      answer: answer,
+      open: false
+    }
+  }))
 
   // const toggleFAQ = index => {
   //   setFaqs(faqs.map((faq, i) => {
@@ -24,6 +24,19 @@ const FaqSection = () => {
   //   }))
   // }
 
+  const toggleAnswer = index => {
+    setFaqs(faqs.map((faq, i) => {
+      if (i === index) {
+        faq.open = !faq.open
+        console.log("If ran") 
+      } else {
+        faq.open = false;
+        console.log("Else ran") 
+      }
+      return faq;
+    }))
+  }
+
   return (
     <div className={`${styles.faqSectionComponent}`}>
         <div className={`${styles.faqSectionContainer}`}>
@@ -31,7 +44,7 @@ const FaqSection = () => {
             {/* Display FaqCard compnent for each frequently asked question in FaqInfo.js */}
             {
                 faqInfo.map(({question, answer}, index) => {
-                    return (<FaqCard key={index} question={question}/>)
+                    return (<FaqCard key={index} question={question} toggleAnswer={toggleAnswer}/>)
                 })
             }
         </div>

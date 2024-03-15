@@ -18,9 +18,9 @@ design, build and deploy the app you've been dreaming of.</p>
             <div className={`${styles.aboutRightCol}`}>
               {/* Display card for each object in devPhases.js */}
               {
-                devPhases.map(({title, description}) => {
+                devPhases.map(({title, description}, index) => {
                   return (
-                  <div className={`${styles.aboutRightCard}`}>
+                  <div key={index} className={`${styles.aboutRightCard}`}>
                     <h2 className={`${styles.aboutRightTitle}`}>{title}</h2>
                     <p className={`${styles.aboutRightText}`}>{description}
                     </p>
