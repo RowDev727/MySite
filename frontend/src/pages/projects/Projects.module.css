@@ -1,5 +1,5 @@
-.projectsPageContainer {
-    /* border: 2px solid var(--color-primary-green); */
+.projectsPageComponent {
+    border: 2px solid var(--color-primary-green);
     color: var(--color-grey-100);
     height: calc(100vh - 4rem);
     text-align: center;
@@ -9,4 +9,11 @@
     margin-top: 4rem;
     margin-bottom: 4rem;
     padding: 2rem;
+    border: 2px solid green;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.test {
+    border: 2px solid red;
 }

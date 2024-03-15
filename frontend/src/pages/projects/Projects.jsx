@@ -1,13 +1,12 @@
 import styles from './Projects.module.css'
 import Newsletter from '../../components/newsletter/Newsletter'
+import ServicesCard from '../../components/servicesCard/ServicesCard'
 
 const Projects = () => {
   return (
     <>
-      <div className={`${styles.projectsPageContainer}`}>
-        <div className={`${styles.projectsContainer} container`}>
-          <h1>Projects</h1>
-        </div>
+      <div className={`${styles.projectsPageComponent}`}>
+        
       </div>
       <div><Newsletter theme={'light'}/></div>
     </>

@@ -1,17 +1,34 @@
+import { HiCodeBracket } from "react-icons/hi2"
+
 export const ourServices = [
     {
         icon: "",
-        title: "Static Web Sites",
-        points: "We build fully dynamic static sites"
+        title: "UI/UX Design",
+        points: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, error."
     },
     {
         icon: "",
-        title: "Dynamic Web Apps",
-        points: "We build fully dynamic web apps"
+        title: "Web Development",
+        points: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, error."
     },
     {
         icon: "",
-        title: "Deployment & Hosting",
-        points: "We deploy and help with hosting"
+        title: "Mobile Development",
+        points: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, error."
     },
+    {
+        icon: "",
+        title: "API Development",
+        points: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, error."
+    },
+    {
+        icon: "",
+        title: "Database Design",
+        points: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, error."
+    },
+    {
+        icon: "",
+        title: "Ecommerce",
+        points: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, error."
+    }
 ]

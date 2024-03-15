@@ -2,21 +2,21 @@ import styles from './Services.module.css'
 import Newsletter from '../../components/newsletter/Newsletter'
 import { ourServices } from '../../data/ourServices'
 import ServicesCard from '../../components/servicesCard/ServicesCard'
+import { HiCodeBracket } from 'react-icons/hi2'
 
 const Services = () => {
   return (
     <>
       <div className={`${styles.servicesPageComponent}`}>
         <div className={`${styles.servicesContainer} container`}>
-          <h3 className={`${styles.servicesTitle}`}>Our Services</h3>
-          <h1 className={`${styles.servicesSubTitle}`}>What we offer</h1>
-          <div className={`${styles.servicesBody}`}>
+          <h1 className={`${styles.servicesTitle}`}>Our Services</h1>
+          <div className={`${styles.servicesRow}`}>
             {/* Display ServiceCard component for each service in ourServices.js */}
-            {
-                ourServices.map(({icon, title, points}, index) => {
-                    return (<ServicesCard key={index} icon={icon} title={title} points={points}/>)
-                })
-            }
+                {
+                    ourServices.map(({icon, title, points}, index) => {
+                        return (<ServicesCard key={index} icon={<HiCodeBracket/>} title={title} points={points}/>)
+                    })
+                }
           </div>
         </div>
       </div>

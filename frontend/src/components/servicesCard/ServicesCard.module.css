@@ -1,55 +1,42 @@
-.servicesCard {
+.servicesBody {
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    grid-gap: 2rem; */
+    margin-top: 2rem; 
+    color: white;
+    /* border: 1px solid green; */
+    padding: 1.5rem 1rem;
     text-align: center;
-    border-radius: 1rem;
-    position: relative;
-    background-color: var(--color-grey-100);
-    overflow: hidden;
-    margin-top: 2rem;
+    transition: transform .5s;
+    cursor: pointer;
+    border-radius: .25rem;
+}
+
+.servicesBody h2 {
+    margin-bottom: 1rem;
+}
+
+.servicesBody:hover {
+    transform: scale(1.1);
+    background: var(--color-grey-300);
+    /* color: var(--color-primary-green);
+    font-weight: bold; */
     
 }
 
+/* .servicesBody:hover .servicesIcon > *{
+    color: var(--color-grey-100);
+} */
 
-.servicesCardBanner {
-    position: absolute;
-    background: var(--color-primary-green);
-    height: 6rem;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.servicesCardIcon {
-    width: 8rem;
-    clip-path: circle(60px at center);
-    margin-top: 2rem;
-}
-
-.servicesCardTitle {
-    font-size: 1.5rem;
-}
-
-.servicesCardPoints {
-    margin: 1rem 2rem;
-    color: var(--color-primary-dark);
-    font-size: .9rem;
-}
-
-.servicesCardBtn {
-    width: 100%;
-    border: none;
-    font-size: 1rem;
-    font-weight: bold;
-    color: var(--color-primary-dark);
-    background: var(--color-primary-green);
-    padding: 1rem;
-}
-
-.servicesCardBtn:hover {
-    cursor: pointer;
-    background: var(--color-primary-dark);
+.servicesSubTitle {
     color: var(--color-primary-green);
-    border: 2px solid var(--color-primary-green);
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+    font-size: 3rem;
+}
+
+.servicesIcon > *{
+    /* background: white; */
+    color: var(--color-primary-green);
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }

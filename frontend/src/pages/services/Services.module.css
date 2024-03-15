@@ -1,45 +1,36 @@
 .servicesPageComponent {
     /* border: 2px solid var(--color-primary-green); */
-    min-height: calc(100vh - 4rem);
-    text-align: center;
+    height: calc(100vh - 4rem);
     background: var(--color-primary-dark);
     
 }
 
 .servicesContainer {
-    /* margin-top: 4rem; */
     margin-bottom: 4rem;
     padding: 6rem 2rem 2rem 2rem;
-    height: 100%;
-    /* border: 2px solid red; */
+    height: calc(100vh - 4rem);
 }
 
-.servicesBody {
+.servicesRow {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 1fr;
-    grid-gap: 2rem;
-    margin-top: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
 }
 
 .servicesTitle {
     color: var(--color-grey-100);
     font-size: 2rem;
+    position: relative;
+    text-align: center;
 }
 
-.servicesSubTitle {
-    color: var(--color-primary-green);
-    font-size: 3rem;
-}
-
-@media screen and (max-width:1024px) {
-    .servicesBody {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (max-width:600px) {
-    .servicesBody {
-        grid-template-columns: repeat(1, 1fr);
-    }
+.servicesTitle::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 5px;
+    background: var(--color-primary-green);
 }
