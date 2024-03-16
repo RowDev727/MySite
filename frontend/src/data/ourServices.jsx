@@ -9,41 +9,41 @@ export const ourServices = [
     {
         Icon: <FaLaptopCode />,
         title: "UI/UX Design",
-        points: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, error."
+        points: "This is just some example text.  Still need to fill this in with something."
     },
     {
         Icon: <HiCodeBracket />,
         title: "Web Development",
-        points: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, error."
+        points: "This is just some example text.  Still need to fill this in with something."
     },
     {
         Icon: <MdOutlinePhoneAndroid />,
         title: "Mobile Development",
-        points: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, error."
+        points: "This is just some example text.  Still need to fill this in with something."
     },
     {
         Icon: <AiFillApi />,
         title: "API Development",
-        points: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, error."
+        points: "This is just some example text.  Still need to fill this in with something."
     },
     {
         Icon: <BsDatabaseFill />,
         title: "Database Design",
-        points: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, error."
+        points: "This is just some example text.  Still need to fill this in with something."
     },
     {
         Icon: <MdShoppingCart />,
         title: "Ecommerce",
-        points: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, error."
+        points: "This is just some example text.  Still need to fill this in with something."
     },
     {
         Icon: <GrVulnerability />,
         title: "Penetration Testing",
-        points: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, error."
+        points: "This is just some example text.  Still need to fill this in with something."
     },
     {
         Icon: <FaServer />,
         title: "Deployment & Hosting",
-        points: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, error."
+        points: "This is just some example text.  Still need to fill this in with something."
     }
 ]

@@ -7,7 +7,7 @@ const Newsletter = ({theme}) => {
     <div className={`${styles.newsletterContainer} ${theme === 'light' ? `${styles.newsletterContainerLight}` : `${styles.newsletterContainerDark}`}`}>
       <div className={`${styles.newsletter} container`}>
         <div className={`${styles.newsletterLeft}`}>
-          <h1 className={`${styles.title}`}>Want tips & tricks to optimize your flow?</h1>
+          <h1 className={`${styles.title}`}>Want us to keep in touch?</h1>
           <p className={`${theme === 'light' ? `${styles.textLight}` : `${styles.textDark}`}`}>Sign up to our newsletter and stay up to date.</p>
         </div>
         <div className={`${styles.newsletterRight}`}>

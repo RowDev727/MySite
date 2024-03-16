@@ -11,7 +11,7 @@ const Navbar = () => {
     return (
     <nav>
         <div className={`${styles.navbarContainer} ${'container'}`}>
-            <h1>AllStacks</h1>
+            <h1>Logo</h1>
             <ul className={`${styles.navbarLinks} ${navShowing ? `${styles.showNav}` : `${styles.hideNav}`}` }>
                 {
                     navLinks.map(({name, path}, index) => {

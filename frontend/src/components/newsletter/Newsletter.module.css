@@ -21,6 +21,10 @@
     gap: 2rem;
 }
 
+.newsletterLeft {
+    align-self: center;
+}
+
 .newsletterLeft .title {
     color: var(--color-primary-green);
 }
