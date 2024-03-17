@@ -1,6 +1,7 @@
 from flask import Blueprint, jsonify, request
 from ..extensions import db
 from ..models import Message
+from .utils import send_slack_alert
 
 api = Blueprint('api', __name__)
 
@@ -36,6 +37,7 @@ def create_message():
     try:
         db.session.add(new_message)
         db.session.commit()
+        send_slack_alert(name, email, message)
     except Exception as e:
         return jsonify({'message': str(e)}), 400
     

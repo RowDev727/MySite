@@ -1,4 +1,11 @@
-- Clean up html classes in contact component
-- Factor buttons out to own component
-- Styles page
-- Footer Text
+- Newsletter Functionality
+- Faq data needs to be filled in
+- Footer text
+- Footer responsiveness
+- Contact info (email, number, address)
+
+- Admin panel restyling
+- Authentication for admin panel
+
+- Modals for each service?
+- Footer links
