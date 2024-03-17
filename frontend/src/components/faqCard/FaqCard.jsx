@@ -20,9 +20,12 @@ const FaqCard = ({x, question, answer}) => {
     <div className={`${styles.faqCardComponent}`}>
         <div className={`${styles.faqCardContainer} container`}>
             <div onClick={() => toggleAnswer(x)} className={`${styles.faqCard}`}>
+              <div className={`${styles.faqTop}`}>
+                {/* {isClicked === x ? <h1>x</h1> : <h1>+</h1>} */}
                 <h1>+</h1>
                 <p>{question}</p>
-                <p className={`${isClicked === x ? `${styles.showAnswer}` : `${styles.hiddenAnswer}`}`}>{answer}</p>
+              </div>  
+              <div className={`${styles.faqBottom} ${isClicked === x ? `${styles.showAnswer}` : `${styles.hiddenAnswer}`}`}>{answer}</div>
             </div>
         </div>
     </div>
