@@ -4,49 +4,24 @@ import { faqInfo } from '../../data/faqInfo'
 import { useState } from 'react'
 
 const FaqSection = () => {
-
-  const [faqs, setFaqs] = useState(faqInfo.map(({question, answer}) => {
-    return {
-      question: question,
-      answer: answer,
-      open: false
-    }
-  }))
-
-  // const toggleFAQ = index => {
-  //   setFaqs(faqs.map((faq, i) => {
-  //     if (i === index) {
-  //       faq.open = !faq.open
-  //     } else {
-  //       faq.open = false
-  //     }
-  //     return faq
-  //   }))
-  // }
-
-  const toggleAnswer = index => {
-    setFaqs(faqs.map((faq, i) => {
-      if (i === index) {
-        faq.open = !faq.open
-        console.log("If ran") 
-      } else {
-        faq.open = false;
-        console.log("Else ran") 
-      }
-      return faq;
-    }))
-  }
-
+  
   return (
     <div className={`${styles.faqSectionComponent}`}>
         <div className={`${styles.faqSectionContainer}`}>
             <h1 className={`${styles.faqSectionTitle}`}>Frequently Asked Questions</h1>
             {/* Display FaqCard compnent for each frequently asked question in FaqInfo.js */}
             {
-                faqInfo.map(({question, answer}, index) => {
-                    return (<FaqCard key={index} question={question} toggleAnswer={toggleAnswer}/>)
-                })
+              faqInfo.map(({question, answer}, index) => (
+                  <div key={index}><FaqCard x={index} question={question} answer={answer}/></div>
+              ))
             }
+            
+            {/* {
+                faqInfo.map(({question, answer, index}) => {
+                  console.log(index)
+                  return (<FaqCard index={index} question={question} answer={answer} toggleAnswer={toggleAnswer}/>)
+                })
+            } */}
         </div>
     </div>
   )
