@@ -6,6 +6,7 @@ import Home from '../../pages/home/Home'
 import About from '../../pages/about/About'
 import Services from '../../pages/services/Services'
 import Contact from '../../pages/contact/Contact'
+import Admin from '../../pages/admin/Admin'
 
 // Custom Component Imports
 import Navbar from '../navbar/Navbar'
@@ -26,6 +27,7 @@ function App() {
       <Route path='/about' element={<About/>}></Route>
       <Route path='/services' element={<Services/>}></Route>
       <Route path='/contact' element={<Contact/>}></Route>
+      <Route path='/admin' element={<Admin/>}></Route>
     </Routes>
     
     <Footer/>
