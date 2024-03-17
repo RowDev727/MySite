@@ -1,5 +1,7 @@
 import styles from './FaqCard.module.css'
 import { useState } from 'react'
+import { FaPlus } from 'react-icons/fa'
+import { MdOutlineClose } from 'react-icons/md'
 
 const FaqCard = ({x, question, answer}) => {
 
@@ -15,14 +17,12 @@ const FaqCard = ({x, question, answer}) => {
     }
   }
 
-
   return (
     <div className={`${styles.faqCardComponent}`}>
         <div className={`${styles.faqCardContainer} container`}>
             <div onClick={() => toggleAnswer(x)} className={`${styles.faqCard}`}>
               <div className={`${styles.faqTop}`}>
-                {/* {isClicked === x ? <h1>x</h1> : <h1>+</h1>} */}
-                <h1>+</h1>
+                {isClicked === x ? <MdOutlineClose/> : <FaPlus/>}
                 <p>{question}</p>
               </div>  
               <div className={`${styles.faqBottom} ${isClicked === x ? `${styles.showAnswer}` : `${styles.hiddenAnswer}`}`}>{answer}</div>
@@ -31,5 +31,6 @@ const FaqCard = ({x, question, answer}) => {
     </div>
   )
 }
+
 
 export default FaqCard
