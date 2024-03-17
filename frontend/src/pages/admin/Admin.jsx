@@ -1,5 +1,6 @@
 import styles from './Admin.module.css'
 import { useState, useEffect } from 'react'
+import Newsletter from '../../components/newsletter/Newsletter'
 
 const About = () => {
   
@@ -16,28 +17,28 @@ const About = () => {
       <div className={`${styles.adminPageComponent}`}>
         <div className={`${styles.adminContainer} container`}>
           <h1 className={`${styles.adminTitle}`}>Admin Panel</h1>
-          <div className={`${styles.adminGrid}`}>
-            {
-            messages.map((message) => (
-                <div className={`${styles.adminCardContainer}`}>
-                    <div className={`${styles.adminCard}`}>
-                        <p>Name: {message.name}</p>
-                        <p>Email: {message.email}</p>
-                        <p>Message: {message.message.slice(0, 50)}...</p>
-                    </div>
-                    <div className={`${styles.adminCardButtons}`}>
-                        <button className={`${styles.viewBtn}`}>View</button>
-                        <button className={`${styles.deleteBtn}`}>Delete</button>
-                    </div>
-                </div>
-            ))
-            }
+          <div className={`${styles.adminTableContainer}`}>
+            <table className={`${styles.adminTable}`}>
+                <tr>
+                    <th>Name</th>
+                    <th>E-mail</th>
+                    <th>Message</th>
 
-
-            
+                </tr>
+                {
+                messages.map((message) => (
+                    <tr className={`${styles.adminTableRow}`}>
+                        <td>{message.name}</td>
+                        <td>{message.email}</td>
+                        <td>{message.message}</td>
+                    </tr>
+                ))
+                }            
+            </table>
           </div>
         </div>
       </div>
+      <div className={`${styles.newsletterSection}`}><Newsletter theme={'light'} /></div>
     </>
   )
 }

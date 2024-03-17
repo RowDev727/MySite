@@ -1,16 +1,15 @@
 .adminPageComponent {
     min-height: calc(100vh - 4rem);
-    background: var(--color-grey-100);
+    background: var(--color-primary-dark);
 }
 
 .adminContainer {
     margin-bottom: 4rem;
     padding: 6rem 2rem 2rem 2rem;
-    
 }
 
 .adminTitle {
-    color: var(--color-primary-dark);
+    color: var(--color-grey-100);
     font-size: 2rem;
     position: relative;
     text-align: center;
@@ -27,56 +26,28 @@
     background: var(--color-primary-green);
 }
 
-.adminGrid {
-    margin-top: 2rem;
-}
-
-.adminCardContainer {
-    display: grid;
-    grid-template-columns: 90% 10%;
-    justify-content: space-between;
+.adminTableContainer {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    border: 2px solid transparent;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 8px;
-    background: var(--color-grey-100);
+}
+
+.adminTable {
+    border-collapse: collapse;
+    margin-top: 2rem;
+    width: 100%;
+    color: var(--color-grey-100);
+    border: 2px solid var(--color-grey-300);
+}
+
+.adminTable th, .adminTable td {
     padding: 1rem;
-    color: var(--color-primary-dark);
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
+    border: 2px solid var(--color-grey-300);
 }
 
-.adminCard {
-    display: grid;
-    grid-template-columns: 20% 30% 40% 10%;
-    /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 1rem; */
-    /* border: 2px solid red; */
+.adminTable th {
+    text-align: start;
+    color: var(--color-primary-green);   
+     
 }
 
-.adminCardButtons {
-    justify-self: end;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-}
-
-.adminCardButtons button {
-    font-size: .75rem;
-    text-decoration: none;
-    padding: .25rem;
-    color: var(--color-primary-dark);
-    border: 2px solid transparent;
-    border-radius: 6px;
-    cursor: pointer;
-    width: 4rem;
-    text-align: center;
-}
-
-.viewBtn {
-    background: var(--color-primary-green);
-}
-
-.deleteBtn {
-    background: red;
-}
