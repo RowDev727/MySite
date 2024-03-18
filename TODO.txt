@@ -3,6 +3,7 @@
 - Footer text
 - Footer responsiveness
 - Contact info (email, number, address)
+- Fix slack messages (add webhook to environment variable)
 
 - Admin panel restyling
 - Authentication for admin panel

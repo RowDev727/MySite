@@ -1,5 +1,6 @@
 import json
 import requests
+import os
 
 def send_slack_alert(name, email, message):
     data = {
@@ -10,7 +11,7 @@ def send_slack_alert(name, email, message):
 {message}'''
     }
 
-    webhook = "https://hooks.slack.com/services/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"
+    webhook = os.environ.get('slack_webhook')
     requests.post(webhook, json.dumps(data))
     #print('Slack alert sent!')
     print(webhook)
