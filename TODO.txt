@@ -2,11 +2,17 @@
 - Faq data needs to be filled in
 - Footer text
 - Footer responsiveness
+- Footer links
 - Contact info (email, number, address)
-- Fix slack messages (add webhook to environment variable)
+- Contact info responsiveness
 
 - Admin panel restyling
 - Authentication for admin panel
 
 - Modals for each service?
-- Footer links
+
+- Top margin on each page?
+
+- not_found component?
+
+- Transition / Scroll effect?

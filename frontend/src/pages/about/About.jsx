@@ -11,7 +11,7 @@ const About = () => {
           <div className={`${styles.aboutRow}`}>
             <div className={`${styles.aboutLeftCol}`}>
               <h2 className={`${styles.aboutLeftTitle}`}>Our Misson</h2>
-              <p className={`${styles.aboutLeftText}`}>(Company Name)'s mission is to provide exceptional service to our customers by simplifying the process of developing your dream apps.</p>
+              <p className={`${styles.aboutLeftText}`}>RowdieDev's mission is to provide exceptional service to our customers by simplifying the process of developing your dream apps.</p>
               <p className={`${styles.aboutLeftText}`}>Our team of developers have a wide variety of skills and the technical knowledge required to quickly and efficiently,
 design, build and deploy the app you've been dreaming of.</p>
             </div>

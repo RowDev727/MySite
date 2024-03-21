@@ -20,7 +20,7 @@ function App() {
   return (
   <div className={styles.appContainer}>
     
-    <Navbar />
+    <Navbar title ={'RowdieDevs'} />
     <Routes>
       <Route path='/' element={<Home/>}></Route>
       <Route path='/home' element={<Home/>}></Route>
