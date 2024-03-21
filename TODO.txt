@@ -1,4 +1,3 @@
-- Faq data needs to be filled in
 - Footer text
 - Footer responsiveness
 - Footer links
@@ -15,3 +14,5 @@
 - not_found component?
 
 - Transition / Scroll effect?
+
+- Logo link to home
