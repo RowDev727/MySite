@@ -43,14 +43,14 @@
     
 }
 
-.newsletterTop {
+.newsletterTop form{
     display: flex;
     gap: .5rem;
     margin-bottom: .5rem;
     align-items: center;
 }
 
-.newsletterTop input {
+.newsletterTop form input {
     padding: .5rem;
     border-radius: 6px;
     outline: none;
@@ -58,12 +58,12 @@
     height: 2rem;
 }
 
-.newsletterTopLight input{
+.newsletterTopLight form input{
     border: 2px solid var(--color-primary-dark);
 
 }
 
-.newsletterTop button {
+.newsletterTop form button {
     border-radius: 6px;
     outline: none;
     border: 2px solid transparent;
@@ -77,19 +77,19 @@
     font-weight: 600;
 }
 
-.newsletterTop button:hover {
+.newsletterTop form button:hover {
     color: var(--color-primary-green);
     background: var(--color-primary-dark);
     border: 2px solid var(--color-primary-green);
     cursor: pointer;
 }
 
-.newsletterTop .btnDark {
+.newsletterTop form .btnDark {
     color: var(--color-primary-green);
     background: var(--color-primary-dark);
 }
 
-.newsletterTop .btnDark:hover {
+.newsletterTop form .btnDark:hover {
     background: var(--color-grey-100);
     border: 2px solid var(--color-primary-green);
 }
@@ -97,6 +97,15 @@
 .newsletterBottom {
     justify-content: start;
     align-items: start;
+}
+
+.newsletterFormError {
+    color: red;
+}
+
+.newsletterFormStatus {
+    color: var(--color-primary-green);
+
 }
 
 .textDark {
@@ -126,5 +135,11 @@
     .newsletterLeft p {
         text-align: center;
     }
+
+    .newsletterFormError, .newsletterFormStatus {
+        text-align: start;
+    }
+
+
 
 }
