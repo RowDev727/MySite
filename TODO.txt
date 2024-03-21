@@ -8,8 +8,6 @@
 
 - Modals for each service?
 
-- Top margin on each page?
-
 - not_found component?
 
 - Transition / Scroll effect?
