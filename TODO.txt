@@ -1,4 +1,3 @@
-- Footer text
 - Footer responsiveness
 - Footer links
 - Contact info (email, number, address)
