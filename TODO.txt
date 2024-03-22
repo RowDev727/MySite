@@ -6,8 +6,6 @@
 - Admin panel restyling
 - Authentication for admin panel
 
-- Modals for each service?
-
 - not_found component?
 
 - Transition / Scroll effect?
