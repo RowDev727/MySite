@@ -10,10 +10,12 @@ nav {
     height: 100%;
 }
 
-h1 {
+.navbarTitle {
+    font-weight: 600;
     grid-column: 1 / 2;
     color: var(--color-primary-green);
     font-size: 2rem;
+    text-decoration: none;
 }
 
 .navbarLinks {

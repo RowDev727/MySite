@@ -3,6 +3,5 @@
 - Footer links
 - Authentication for admin panel
 - Transition / Scroll effect?
-- Logo link to home
 
 - Admin panel restyling

@@ -11,7 +11,7 @@ const Navbar = ({title}) => {
     return (
     <nav>
         <div className={`${styles.navbarContainer} ${'container'}`}>
-            <h1>{title}</h1>
+            <NavLink className={`${styles.navbarTitle}`} to={'/home'}>RowdieDevs</NavLink>
             <ul className={`${styles.navbarLinks} ${navShowing ? `${styles.showNav}` : `${styles.hideNav}`}` }>
                 {
                     navLinks.map(({name, path}, index) => {
