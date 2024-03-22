@@ -14,7 +14,7 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 3rem;
     /* border: 2px solid red; */
-    margin-top: 6rem;
+    margin-top: 2rem;
 }
 
 .aboutTitle {

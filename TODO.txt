@@ -1,13 +1,9 @@
-- Footer responsiveness
-- Footer links
 - Contact info (email, number, address)
 - Contact info responsiveness
+- Footer links
+- Authentication for admin panel
+- not_found component?
+- Transition / Scroll effect?
+- Logo link to home
 
 - Admin panel restyling
-- Authentication for admin panel
-
-- not_found component?
-
-- Transition / Scroll effect?
-
-- Logo link to home
