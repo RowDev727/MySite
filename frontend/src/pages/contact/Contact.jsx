@@ -104,7 +104,8 @@ const Contact = () => {
                     value={formData.name}
                     placeholder='Enter your name'
                     onChange={handleChange}
-                    autoFocus={true} />
+                    autoFocus={true}
+                    autoComplete='off' />
                     {errors.name && <div className={`${styles.contactFormError}`}>{errors.name}</div>}
                 </div>
                 <div className={`${styles.contactFormGroup}`}>
@@ -115,7 +116,8 @@ const Contact = () => {
                     name='email'
                     value={formData.email}
                     placeholder='Enter your e-mail'
-                    onChange={handleChange} />
+                    onChange={handleChange}
+                    autoComplete='off' />
                     {errors.email && <div className={`${styles.contactFormError}`}>{errors.email}</div>}
                 </div>
                 <div className={`${styles.contactFormGroup}`}>
@@ -126,7 +128,8 @@ const Contact = () => {
                     value={formData.message}
                     rows='6'
                     placeholder='Enter your message'
-                    onChange={handleChange}>
+                    onChange={handleChange}
+                    autoComplete='off'>
                       {errors.message && <div className={`${styles.contactFormError}`}>{errors.message}</div>}
                   </textarea>
                   {errors.message && <div className={`${styles.contactFormError}`}>{errors.message}</div>}

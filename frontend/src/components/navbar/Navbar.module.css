@@ -18,6 +18,10 @@ nav {
     text-decoration: none;
 }
 
+.navbarTitle:hover {
+    transform: scale(1.1);
+}
+
 .navbarLinks {
     grid-column: -2 / -1;
     display: grid;
@@ -56,7 +60,7 @@ li a {
 }
 
 
-.bars {
+/* .bars {
     font-size: 24px;
     color: hsl(0, 0%, 11%);
     margin-left: 1rem;
@@ -65,7 +69,7 @@ li a {
 
 .bars:hover {
     cursor: pointer;
-}
+} */
 
 .btnContainer {
     display: flex;
