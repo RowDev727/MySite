@@ -2,4 +2,3 @@
 - Footer links
 - Authentication for admin panel
 - Transition / Scroll effect?
-- Admin panel restyling

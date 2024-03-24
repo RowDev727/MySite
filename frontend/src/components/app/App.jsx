@@ -13,6 +13,9 @@ import NotFound from '../../pages/notFound/NotFound'
 import Navbar from '../navbar/Navbar'
 import Footer from '../footer/Footer'
 
+// Custom Component Utilities
+import PrivateRoutes from '../../utils/privateRoutes/PrivateRoutes'
+
 // Dependencies
 import { Routes, Route } from 'react-router-dom'
 
@@ -23,13 +26,18 @@ function App() {
     
     <Navbar title ={'RowdieDevs'} />
     <Routes>
-      <Route path='/' element={<Home/>}></Route>
-      <Route path='/home' element={<Home/>}></Route>
-      <Route path='/about' element={<About/>}></Route>
-      <Route path='/services' element={<Services/>}></Route>
-      <Route path='/contact' element={<Contact/>}></Route>
-      <Route path='/admin' element={<Admin/>}></Route>
+      {/* Public Routes */}
+      <Route path='/' element={<Home/>}/>
+      <Route path='/home' element={<Home/>}/>
+      <Route path='/about' element={<About/>}/>
+      <Route path='/services' element={<Services/>}/>
+      <Route path='/contact' element={<Contact/>}/>
+      {/* <Route path='/admin' element={<Admin/>}/> */}
       <Route path='*' element={<NotFound/>}/>
+      {/* Protected Routes */}
+      <Route element={<PrivateRoutes/>}>
+        <Route path='/admin' element={<Admin/>} exact/>
+      </Route>
     </Routes>
     
     <Footer/>
