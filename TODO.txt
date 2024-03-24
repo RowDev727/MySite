@@ -1,5 +1,4 @@
 - Contact info (email, number, address)
-- Contact info responsiveness
 - Footer links
 - Authentication for admin panel
 - Transition / Scroll effect?

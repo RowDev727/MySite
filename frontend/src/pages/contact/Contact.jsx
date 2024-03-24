@@ -77,13 +77,13 @@ const Contact = () => {
 
   return (
     <>
-      <div className={`${styles.contactPageContainer}`}>
-        <div className={`${styles.contactFormContainer} container`}>
+      <div className={`${styles.contactPageComponent}`}>
+        <div className={`${styles.contactContainer} container`}>
           <div className={`${styles.contactHeading}`}>
-            <h3>Contact Us</h3>
+            <h3 className={`${styles.contactHeadingTitle}`}>Contact Us</h3>
             <h1>Get in Touch</h1>
           </div>
-          <div className={`${styles.contactFormBody}`}>
+          <div className={`${styles.contactBody}`}>
             <div className={`${styles.contactLeft}`}>
               <h2 className={`${styles.contactLeftTitle}`}>Send us a message<FaEnvelopeOpenText/></h2>
               <p className={`${styles.contactLeftText}`}>Feel free to reach out through contact form or find our contact information below.  Your feedback, questions and suggestions are important to us as we strive to provide exceptional service to our community and customers.</p>
@@ -130,7 +130,7 @@ const Contact = () => {
                     placeholder='Enter your message'
                     onChange={handleChange}
                     autoComplete='off'>
-                      {errors.message && <div className={`${styles.contactFormError}`}>{errors.message}</div>}
+                    {errors.message && <div className={`${styles.contactFormError}`}>{errors.message}</div>}
                   </textarea>
                   {errors.message && <div className={`${styles.contactFormError}`}>{errors.message}</div>}
                 </div>
