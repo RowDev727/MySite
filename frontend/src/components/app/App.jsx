@@ -8,6 +8,7 @@ import Services from '../../pages/services/Services'
 import Contact from '../../pages/contact/Contact'
 import Admin from '../../pages/admin/Admin'
 import NotFound from '../../pages/notFound/NotFound'
+import AdminLogin from '../../pages/adminLogin/AdminLogin'
 
 // Custom Component Imports
 import Navbar from '../navbar/Navbar'
@@ -32,7 +33,7 @@ function App() {
       <Route path='/about' element={<About/>}/>
       <Route path='/services' element={<Services/>}/>
       <Route path='/contact' element={<Contact/>}/>
-      {/* <Route path='/admin' element={<Admin/>}/> */}
+      <Route path='/adminLogin' element={<AdminLogin/>}/>
       <Route path='*' element={<NotFound/>}/>
       {/* Protected Routes */}
       <Route element={<PrivateRoutes/>}>

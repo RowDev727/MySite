@@ -1,0 +1,36 @@
+.adminLoginPageComponent {
+    min-height: calc(100vh - 4rem);
+    background: var(--color-primary-dark);
+    color: white;
+}
+
+.adminLoginContainer {
+    margin-bottom: 4rem;
+    padding: 4rem 2rem 2rem 2rem;
+}
+
+.adminLoginTitle {
+    color: var(--color-grey-100);
+    font-size: 2rem;
+    position: relative;
+    text-align: center;
+}
+
+.adminLoginTitle::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 5px;
+    background: var(--color-primary-green);
+}
+
+.adminLoginFormContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+

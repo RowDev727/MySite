@@ -35,6 +35,7 @@ def create_message():
 
 # Get contact message via id
 @api.route('/api/message/<int:id>', methods=['GET'])
+@jwt_required()
 def get_message(id):
     message = Message.query.filter_by(id=id).first()
     if message:
@@ -77,6 +78,7 @@ def create_newsletter_contact():
 
 # Get all newsletter subscribers
 @api.route('/api/contacts', methods=['GET'])
+@jwt_required()
 def get_contacts():
     contacts = NewsLetterContact.query.all()
     json_contacts = list(map(lambda contact: contact.to_json(), contacts))

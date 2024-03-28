@@ -2,15 +2,19 @@ import styles from './Admin.module.css'
 import { useState, useEffect } from 'react'
 import Newsletter from '../../components/newsletter/Newsletter'
 
-const About = () => {
+const Admin = () => {
   
     const [messages, setMessages] = useState([])
     // Fetch Messages from API
-    useEffect(() => {
-        fetch('api/messages').then(res => res.json()).then(data => {
-        setMessages(data.messages)
-        })
-    }, [])
+    try{
+      useEffect(() => {
+          fetch('api/messages').then(res => res.json()).then(data => {
+          messages && setMessages(data.messages)
+          })
+      }, [])}
+    catch (error) {
+      console.log(error)
+    }
 
     return (
     <>
@@ -26,13 +30,13 @@ const About = () => {
 
                 </tr>
                 {
-                messages.map((message) => (
-                    <tr className={`${styles.adminTableRow}`}>
-                        <td>{message.name}</td>
-                        <td>{message.email}</td>
-                        <td>{message.message}</td>
-                    </tr>
-                ))
+                messages && messages.map((message) => (
+                  <tr className={`${styles.adminTableRow}`}>
+                      <td>{message.name}</td>
+                      <td>{message.email}</td>
+                      <td>{message.message}</td>
+                  </tr>
+              ))
                 }            
             </table>
           </div>
@@ -43,4 +47,4 @@ const About = () => {
   )
 }
 
-export default About
+export default Admin
