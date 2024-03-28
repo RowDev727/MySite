@@ -12,12 +12,15 @@ const AdminLogin = () => {
 
     const [errors, setErrors] = useState({})
     const [formValid, setFormValid] = useState(false)
-    const [accessToken, setAccessToken] = useState('')
 
     const validationSchema = object({
       username: string().required('Please enter a username'),
       password: string().required('Please enter a password')
-    })
+    })    
+
+    const handleSubmit = (e) => {
+      console.log(e)
+    }
 
     const handleChange = (e) => {
       const {name, value} = e.target 
