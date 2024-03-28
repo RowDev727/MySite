@@ -1,7 +1,9 @@
 import styles from './AdminLogin.module.css'
 import { useState, useEffect } from 'react'
+import { useNavigate} from 'react-router-dom'
 import { object, string } from 'yup'
 import Newsletter from '../../components/newsletter/Newsletter'
+import Admin from '../admin/Admin'
 
 const AdminLogin = () => {
 
@@ -12,14 +14,60 @@ const AdminLogin = () => {
 
     const [errors, setErrors] = useState({})
     const [formValid, setFormValid] = useState(false)
+    const [token, setToken] = useState('')
+
+    const navigate = useNavigate()
 
     const validationSchema = object({
       username: string().required('Please enter a username'),
       password: string().required('Please enter a password')
-    })    
+    })   
+  
+    const handleSubmit = async (e) => {
+      e.preventDefault()
+      try {
+        await validationSchema.validate(formData, {abortEarly:false})
+        const data = {
+          username: formData.username,
+          password: formData.password
+        }
 
-    const handleSubmit = (e) => {
-      console.log(e)
+        const options = {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(data)
+        }
+
+        fetch('/api/token', options)
+        .then(res => {
+          if (res.status === 200) return res.json()
+          else alert("Error!")
+        })
+        .then(data => {
+          setToken(data.access_token)
+          console.log(token)
+          sessionStorage.setItem('token', token)
+          
+          setFormData({
+            username: '',
+            password: ''
+          })
+
+          navigate('/admin')
+        })
+        .catch(error => {
+          console.error('There was an error', error)
+        })
+        
+      } catch (error) {
+        const newErrors = {}
+        error.inner.forEach(err => {
+          newErrors[err.path] = err.message
+        })
+        setErrors(newErrors)
+      }
     }
 
     const handleChange = (e) => {
@@ -64,6 +112,7 @@ const AdminLogin = () => {
                     {errors.name && <div className={`${styles.adminLoginFormError}`}>{errors.password}</div>}              
               </div>
               <button className={`${styles.adminLoginFormSubmitBtn}`} type='submit'>Log in</button>
+              {token && <span>Your logged in!</span>}
             </form>
           </div>
         </div>
