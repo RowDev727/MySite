@@ -1,6 +1,6 @@
 from flask import Flask
 from .config import DevConfig
-from .extensions import db, migrate, cors
+from .extensions import db, migrate, cors, jwt
 
 def create_app(config_class=DevConfig):
     # Initialize flask app
@@ -9,10 +9,11 @@ def create_app(config_class=DevConfig):
     # Set config object
     app.config.from_object(DevConfig)
     
-    # Initialize restx api object
+    # Initialize Extensions
     db.init_app(app)
     migrate.init_app(app, db, render_as_batch=True)
     cors.init_app(app)
+    jwt.init_app(app)
     
     
     # Import Blueprints

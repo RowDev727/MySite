@@ -8,3 +8,4 @@ class DevConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'sqlite:///site.db'
     DEBUG = True
     SQLALCHEMY_ECHO = False
+    JWT_SECRET_KEY = config('JWT_SECRET_KEY')

@@ -1,32 +1,14 @@
 from flask import Blueprint, jsonify, request
+from flask_jwt_extended import create_access_token
 from ..extensions import db
 from ..models import Message, NewsLetterContact
 from .utils import send_slack_alert
 
+
 api = Blueprint('api', __name__)
 
-
-@api.route('/api/message/<int:id>', methods=['GET'])
-def get_message(id):
-    message = Message.query.filter_by(id=id).first()
-    if message:
-        return {'user': message.name, 'email': message.email, 'message': message.message}
-    else:
-        return {'message': 'User not found'}, 400
-
-@api.route('/api/messages', methods=['GET'])
-def get_messages():
-    messages = Message.query.all()
-    json_messages = list(map(lambda message: message.to_json(), messages))
-    return jsonify({"messages": json_messages})
-
-@api.route('/api/contacts', methods=['GET'])
-def get_contacts():
-    contacts = NewsLetterContact.query.all()
-    json_contacts = list(map(lambda contact: contact.to_json(), contacts))
-    return jsonify({"messages": json_contacts})
-
-    
+# Contact Form Routes
+# Create a contact message
 @api.route('/api/create_message', methods=['POST'])
 def create_message():
     name = request.json.get('name')
@@ -48,8 +30,29 @@ def create_message():
         return jsonify({'message': str(e)}), 400
     
     return jsonify({'message': 'Contact Created!'}), 201
-        
-        
+   
+
+# Get contact message via id
+@api.route('/api/message/<int:id>', methods=['GET'])
+def get_message(id):
+    message = Message.query.filter_by(id=id).first()
+    if message:
+        return {'user': message.name, 'email': message.email, 'message': message.message}
+    else:
+        return {'message': 'User not found'}, 400
+
+
+# Get all contact messages
+@api.route('/api/messages', methods=['GET'])
+def get_messages():
+    messages = Message.query.all()
+    json_messages = list(map(lambda message: message.to_json(), messages))
+    return jsonify({"messages": json_messages})
+
+
+
+#Newsletter Routes 
+# Create a newsletter contact subscription      
 @api.route('/api/create_newsletter_contact', methods=['POST'])
 def create_newsletter_contact():
     email = request.json.get('email')
@@ -68,3 +71,25 @@ def create_newsletter_contact():
         return jsonify({'message': str(e)}), 400
     
     return jsonify({'message': 'Newsletter Contact Created!'}), 201
+
+
+# Get all newsletter subscribers
+@api.route('/api/contacts', methods=['GET'])
+def get_contacts():
+    contacts = NewsLetterContact.query.all()
+    json_contacts = list(map(lambda contact: contact.to_json(), contacts))
+    return jsonify({'messages': json_contacts})
+
+
+# Authentication Routes
+@api.route('/api/token', methods=['POST'])
+def create_token():
+    username = request.json.get('username', None)
+    password = request.json.get('password', None)
+    if username != 'test' or password != 'test':
+        return jsonify({'msg': 'Bad username or password'}), 401
+    
+    access_token = create_access_token(identity=username)
+
+    return jsonify(access_token=access_token)
+    
