@@ -1,7 +1,8 @@
 from flask import Blueprint, jsonify, request
-from flask_jwt_extended import create_access_token
+from flask_jwt_extended import create_access_token, create_refresh_token, jwt_required
+from werkzeug.security import check_password_hash
 from ..extensions import db
-from ..models import Message, NewsLetterContact
+from ..models import Message, NewsLetterContact, User
 from .utils import send_slack_alert
 
 
@@ -44,6 +45,7 @@ def get_message(id):
 
 # Get all contact messages
 @api.route('/api/messages', methods=['GET'])
+@jwt_required()
 def get_messages():
     messages = Message.query.all()
     json_messages = list(map(lambda message: message.to_json(), messages))
@@ -86,10 +88,18 @@ def get_contacts():
 def create_token():
     username = request.json.get('username', None)
     password = request.json.get('password', None)
-    if username != 'test' or password != 'test':
-        return jsonify({'msg': 'Bad username or password'}), 401
+    user = User.query.filter_by(username=username).first()
     
-    access_token = create_access_token(identity=username)
-
-    return jsonify(access_token=access_token)
+    if user and username == user.username and check_password_hash(user.password, password):
+        access_token = create_access_token(identity=username)
+        refresh_token = create_refresh_token(identity=username)
+        
+        return jsonify(
+            {
+                'access_token': access_token,
+                'refresh_token': refresh_token
+            }
+        )
+        
+    return jsonify({'msg': 'Bad username or password'}), 401
     
