@@ -17,7 +17,6 @@ const AdminLogin = () => {
     const [user, setUser] = useState('')
     const [errors, setErrors] = useState({})
     const [formValid, setFormValid] = useState(false)
-    const [token, setToken] = useState('')
 
     const navigate = useNavigate()
 
@@ -49,17 +48,17 @@ const AdminLogin = () => {
           else alert("Error!")
         })
         .then(data => {
-          setToken(data.access_token)
-          setUser(data.username)
-          console.log(token)
-          setAuth({ user, token })
+          console.log(`access_token: ${data.access_token}`)
+          const token = data.access_token
+          console.log(`token: ${token}`)
+          setAuth({ token })
           
           setFormData({
             username: '',
             password: ''
           })
 
-          navigate('/about')
+          navigate('/admin')
         })
         .catch(error => {
           console.error('There was an error', error)
@@ -116,7 +115,7 @@ const AdminLogin = () => {
                     {errors.name && <div className={`${styles.adminLoginFormError}`}>{errors.password}</div>}              
               </div>
               <button className={`${styles.adminLoginFormSubmitBtn}`} type='submit'>Log in</button>
-              {token && <span>Your logged in!</span>}
+              {/* {token && <span>Your logged in!</span>} */}
             </form>
           </div>
         </div>

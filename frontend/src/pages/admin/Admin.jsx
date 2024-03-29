@@ -1,14 +1,19 @@
 import styles from './Admin.module.css'
 import { useState, useEffect } from 'react'
 import Newsletter from '../../components/newsletter/Newsletter'
+import useAuth from '../../hooks/useAuth'
 
 const Admin = () => {
   
     const [messages, setMessages] = useState([])
+    const {auth, token} = useAuth()
     // Fetch Messages from API
     try{
       useEffect(() => {
-          fetch('api/messages').then(res => res.json()).then(data => {
+          
+          console.log(auth?.token)
+          const headers = { 'Authorization': 'Bearer ' + auth?.token}
+          fetch('api/messages', { headers }).then(res => res.json()).then(data => {
           messages && setMessages(data.messages)
           })
       }, [])}
@@ -23,21 +28,24 @@ const Admin = () => {
           <h1 className={`${styles.adminTitle}`}>Admin Panel</h1>
           <div className={`${styles.adminTableContainer}`}>
             <table className={`${styles.adminTable}`}>
-                <tr>
-                    <th>Name</th>
-                    <th>E-mail</th>
-                    <th>Message</th>
-
-                </tr>
-                {
-                messages && messages.map((message) => (
-                  <tr className={`${styles.adminTableRow}`}>
-                      <td>{message.name}</td>
-                      <td>{message.email}</td>
-                      <td>{message.message}</td>
+                <thead>
+                  <tr>
+                      <th>Name</th>
+                      <th>E-mail</th>
+                      <th>Message</th>
                   </tr>
-              ))
-                }            
+                </thead>
+                <tbody>
+                  {
+                  messages && messages.map((message, index) => (
+                    <tr key={index} className={`${styles.adminTableRow}`}>
+                        <td>{message.name}</td>
+                        <td>{message.email}</td>
+                        <td>{message.message}</td>
+                    </tr>
+                ))
+                  }
+                </tbody>            
             </table>
           </div>
         </div>
