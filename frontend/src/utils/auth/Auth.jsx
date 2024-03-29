@@ -1,11 +1,15 @@
-import { createAuthProvider } from 'react-token-auth'
+import { createContext, useState } from 'react'
 
-export const [useAuth, authFetch, login, logout] = 
-    createAuthProvider({
-        accessTokenKey: 'access_token',
-        onUpdateToken: (token) => fetch('/api/token_refresh', {
-            method: 'POST',
-            body: token.refresh_token
-        })
-        .then(res => res.json())
-    })
+const AuthContext = createContext({})
+
+export const AuthProvider = ({ children }) => {
+    const [auth, setAuth] = useState({})
+
+    return (
+        <AuthContext.Provider value={{ auth, setAuth}}>
+            {children}
+        </AuthContext.Provider>
+    )
+} 
+
+export default AuthContext

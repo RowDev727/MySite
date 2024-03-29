@@ -1,17 +1,20 @@
 import styles from './AdminLogin.module.css'
 import { useState, useEffect } from 'react'
-import { useNavigate} from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { object, string } from 'yup'
 import Newsletter from '../../components/newsletter/Newsletter'
 import Admin from '../admin/Admin'
+import useAuth from '../../hooks/useAuth'
 
 const AdminLogin = () => {
 
+    const { setAuth } = useAuth()
     const [formData, setFormData] = useState({
       username: "",
       password: ""
     })
 
+    const [user, setUser] = useState('')
     const [errors, setErrors] = useState({})
     const [formValid, setFormValid] = useState(false)
     const [token, setToken] = useState('')
@@ -47,15 +50,16 @@ const AdminLogin = () => {
         })
         .then(data => {
           setToken(data.access_token)
+          setUser(data.username)
           console.log(token)
-          sessionStorage.setItem('token', token)
+          setAuth({ user, token })
           
           setFormData({
             username: '',
             password: ''
           })
 
-          navigate('/admin')
+          navigate('/about')
         })
         .catch(error => {
           console.error('There was an error', error)

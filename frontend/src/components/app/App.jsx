@@ -15,7 +15,7 @@ import Navbar from '../navbar/Navbar'
 import Footer from '../footer/Footer'
 
 // Custom Component Utilities
-import PrivateRoutes from '../../utils/privateRoutes/PrivateRoutes'
+import RequireAuth from '../../utils/requireAuth/RequireAuth'
 
 // Dependencies
 import { Routes, Route } from 'react-router-dom'
@@ -36,7 +36,7 @@ function App() {
       <Route path='/adminLogin' element={<AdminLogin/>}/>
       <Route path='*' element={<NotFound/>}/>
       {/* Protected Routes */}
-      <Route element={<PrivateRoutes/>}>
+      <Route element={<RequireAuth/>}>
         <Route path='/admin' element={<Admin/>} exact/>
       </Route>
     </Routes>
