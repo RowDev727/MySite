@@ -1,3 +1,18 @@
-- Contact info (email, number, address)
-- Footer links
-- Transition / Scroll effect?
+- Transition / animation / Scroll effect
+- Admin login form validation
+- Refresh tokens
+- Persistant token regeneration upon successful authentication
+- Footer links to real pages
+- Red outline on form input when errors occur?
+
+Before Deploying:
+- Change secret keys
+- Add .env to gitignore
+- Unit testing
+- Clear Database test entries
+- Stronger Admin user creds
+- Proof read all text for grammatical and punctual errors
+- Update contact form email and phone number with correct info
+- Debug mode OFF!
+
+
