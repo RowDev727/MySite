@@ -18,7 +18,6 @@ const Newsletter = ({theme}) => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      console.log('try running')
       await validationSchema.validate(formData, {abortEarly:false})
       console.log('Form Submitted', formData)
       console.log(`Email: ${formData.email}`)

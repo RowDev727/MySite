@@ -8,6 +8,7 @@ import Services from '../../pages/services/Services'
 import Contact from '../../pages/contact/Contact'
 import Admin from '../../pages/admin/Admin'
 import NotFound from '../../pages/notFound/NotFound'
+import ComingSoon from '../../pages/comingSoon/ComingSoon'
 import AdminLogin from '../../pages/adminLogin/AdminLogin'
 
 // Custom Component Imports
@@ -34,6 +35,7 @@ function App() {
       <Route path='/services' element={<Services/>}/>
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/adminlogin' element={<AdminLogin/>}/>
+      <Route path='/comingsoon' element={<ComingSoon/>}/>
       <Route path='*' element={<NotFound/>}/>
       {/* Protected Routes */}
       <Route element={<RequireAuth/>}>

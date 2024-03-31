@@ -1,0 +1,56 @@
+.comingSoonPageComponent {
+    min-height: calc(100vh - 4rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.comingSoonPageComponent h1 {
+    font-size: 8rem;
+    margin-bottom: 2rem;
+    color: var(--color-primary-green);
+}
+
+.comingSoonBtn {
+    font-size: 2rem;
+    text-decoration: none;
+    padding: .5rem;
+    color: var(--color-primary-green);
+    background: var(--color-primary-dark);
+    border: 2px solid var(--color-primary-green);
+    border-radius: 6px;
+    cursor: pointer;
+    width: 12rem;
+    text-align: center;
+}
+
+.comingSoonBtn:hover {
+    background: var(--color-primary-green);
+    color: var(--color-primary-dark);
+    border: 2px solid transparent;
+}
+
+@media screen and (max-width: 1248px) {
+    .comingSoonPageComponent h1 {
+        font-size: 6rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .comingSoonPageComponent h1 {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .comingSoonPageComponent h1 {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .comingSoonPageComponent h1 {
+        font-size: 2rem;
+    }
+}

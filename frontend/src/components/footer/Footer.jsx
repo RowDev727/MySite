@@ -14,33 +14,33 @@ const Footer = () => {
             <div className={`${styles.footerCard}`}>
             <h3 className={`${styles.footerCardTitle}`}>Solutions</h3>
             <ul>
-                <li><a href="#">Analytics</a></li>
-                <li><a href="#">Marketing</a></li>
-                <li><a href="#">Commerce</a></li>
+                <li><NavLink to={'/comingsoon'}>Analytics</NavLink></li>
+                <li><NavLink to={'/comingsoon'}>Marketing</NavLink></li>
+                <li><NavLink to={'/comingsoon'}>Commerce</NavLink></li>
             </ul>
             </div>
             <div className={`${styles.footerCard}`}>
             <h3 className={`${styles.footerCardTitle}`}>Support</h3>
                 <ul>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Documentation</a></li>
-                <li><a href="#">Guides</a></li>
+                <li><NavLink to={'/comingsoon'}>Pricing</NavLink></li>
+                <li><NavLink to={'/comingsoon'}>Documentation</NavLink></li>
+                <li><NavLink to={'/comingsoon'}>Guides</NavLink></li>
                 </ul>
             </div>
             <div className={`${styles.footerCard}`}>
             <h3 className={`${styles.footerCardTitle}`}>Company</h3>
                 <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Jobs</a></li>
+                <li><NavLink to={'/comingsoon'}>About</NavLink></li>
+                <li><NavLink to={'/comingsoon'}>Blogs</NavLink></li>
+                <li><NavLink to={'/comingsoon'}>Jobs</NavLink></li>
                 </ul>
             </div>
             <div className={`${styles.footerCard}`}>
             <h3 className={`${styles.footerCardTitle}`}>Legal</h3>
                 <ul>
-                <li><a href="#">Claim</a></li>
-                <li><a href="#">Privacy</a></li>
-                <li><a href="#">Terms</a></li>
+                <li><NavLink to={'/comingsoon'}>Claim</NavLink></li>
+                <li><NavLink to={'/comingsoon'}>Privacy</NavLink></li>
+                <li><NavLink to={'/comingsoon'}>Terms</NavLink></li>
                 </ul>
             </div>
         </div>
