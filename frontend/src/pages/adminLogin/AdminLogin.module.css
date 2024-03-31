@@ -33,4 +33,51 @@
     align-items: center;
 }
 
+.adminLoginForm {
+    margin-top: 6rem;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.adminLoginFormGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.adminLoginFormLabel {
+    margin-bottom: .25rem;
+}
+
+.adminLoginFormInput {
+    padding: .25rem;
+    border-radius: 6px;
+    outline: none;
+    border: 2px solid transparent;
+}
+
+.adminLoginFormSubmitBtn {
+    border-radius: 6px;
+    outline: none;
+    border: 2px solid transparent;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-primary-dark);
+    background: var(--color-primary-green);
+    width: 60%;
+    align-self: center;
+    font-weight: 600;
+}
+
+.adminLoginFormSubmitBtn:hover {
+    color: var(--color-primary-green);
+    background: var(--color-primary-dark);
+    border: 2px solid var(--color-primary-green);
+    cursor: pointer;
+}
+
 
