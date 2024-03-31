@@ -65,6 +65,12 @@ const Contact = () => {
     
   }
 
+  const handleFocusChange = (e) => {
+    setErrors({})
+
+    setFormValid(false)
+  }
+
   const handleChange = (e) => {
     const {name, value} = e.target
 
@@ -103,6 +109,7 @@ const Contact = () => {
                     value={formData.name}
                     placeholder='Enter your name'
                     onChange={handleChange}
+                    onFocus={handleFocusChange}
                     autoFocus={true}
                     autoComplete='off' />
                     {errors.name && <div className={`${styles.contactFormError}`}>{errors.name}</div>}
@@ -116,6 +123,7 @@ const Contact = () => {
                     value={formData.email}
                     placeholder='Enter your e-mail'
                     onChange={handleChange}
+                    onFocus={handleFocusChange}
                     autoComplete='off' />
                     {errors.email && <div className={`${styles.contactFormError}`}>{errors.email}</div>}
                 </div>
@@ -128,6 +136,7 @@ const Contact = () => {
                     rows='6'
                     placeholder='Enter your message'
                     onChange={handleChange}
+                    onFocus={handleFocusChange}
                     autoComplete='off'>
                     {errors.message && <div className={`${styles.contactFormError}`}>{errors.message}</div>}
                   </textarea>
