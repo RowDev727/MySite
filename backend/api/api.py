@@ -1,6 +1,7 @@
 from flask import Blueprint, jsonify, request
 from flask_jwt_extended import create_access_token, create_refresh_token, jwt_required
 from werkzeug.security import check_password_hash
+
 from ..extensions import db
 from ..models import Message, NewsLetterContact, User
 from .utils import send_slack_alert
@@ -10,6 +11,7 @@ api = Blueprint('api', __name__)
 
 # Contact Form Routes
 # Create a contact message
+# Sends slack alert to admin upon valid request
 @api.route('/api/create_message', methods=['POST'])
 def create_message():
     name = request.json.get('name')
@@ -33,7 +35,7 @@ def create_message():
     return jsonify({'message': 'Contact Created!'}), 201
    
 
-# Get contact message via id
+# Get contact message via id (Auth Required)
 @api.route('/api/message/<int:id>', methods=['GET'])
 @jwt_required()
 def get_message(id):
@@ -44,7 +46,7 @@ def get_message(id):
         return {'message': 'User not found'}, 400
 
 
-# Get all contact messages
+# Get all contact messages (Auth Required)
 @api.route('/api/messages', methods=['GET'])
 @jwt_required()
 def get_messages():
@@ -76,7 +78,7 @@ def create_newsletter_contact():
     return jsonify({'message': 'Newsletter Contact Created!'}), 201
 
 
-# Get all newsletter subscribers
+# Get all newsletter subscribers (Auth Required)
 @api.route('/api/contacts', methods=['GET'])
 @jwt_required()
 def get_contacts():
@@ -85,7 +87,9 @@ def get_contacts():
     return jsonify({'messages': json_contacts})
 
 
-# Authentication Routes
+# Authentication Routes (Requires auth in request body)
+# Ex: {username: 'Someone', password: 'SomePassword'}
+# Grants authenticated user jwt access and refresh tokens
 @api.route('/api/token', methods=['POST'])
 def create_token():
     username = request.json.get('username', None)

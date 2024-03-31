@@ -6,12 +6,10 @@ import useAuth from '../../hooks/useAuth'
 const Admin = () => {
   
     const [messages, setMessages] = useState([])
-    const {auth, token} = useAuth()
+    const { auth } = useAuth()
     // Fetch Messages from API
     try{
       useEffect(() => {
-          
-          console.log(auth?.token)
           const headers = { 'Authorization': 'Bearer ' + auth?.token}
           fetch('api/messages', { headers }).then(res => res.json()).then(data => {
           messages && setMessages(data.messages)

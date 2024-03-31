@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 const Footer = () => {
   return (
     <div className={`${styles.footerContainer}`}>
-      <div className={`${styles.footer} container`}>
+      <div className={`${styles.footer}`}>
         <div className={`${styles.footerHeader}`}>
           {/* <h1 className={`${styles.footerTitle}`}>RowdieDevs</h1> */}
           <NavLink className={`${styles.footerTitle}`} to={'/home'}>RowdieDevs</NavLink>

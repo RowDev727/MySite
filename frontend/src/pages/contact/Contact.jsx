@@ -6,7 +6,6 @@ import { FaEnvelope } from 'react-icons/fa'
 import { FaPhoneVolume } from 'react-icons/fa6'
 import { FaLocationDot } from 'react-icons/fa6'
 import { FaEnvelopeOpenText } from 'react-icons/fa6'
-import Test from '../../components/testing/Test'
 
 const Contact = () => {
   const [formData, setFormData] = useState({

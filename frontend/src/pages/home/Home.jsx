@@ -11,11 +11,13 @@ import FaqSection from '../../components/faqSection/FaqSection'
 const Home = () => {
   return (
     <>
-      <div className={`${styles.homeContainer}`}>
-        <div className={`${styles.heroSection}`}><Hero /></div>
-        <div className={`${styles.infoSection}`}><Info /></div>
-        <div className={`${styles.newsletterSection}`}><Newsletter theme={'dark'} /></div>
-        <div className={`${styles.faqSection}`}><FaqSection /></div>
+      <div className={`${styles.homePageComponent}`}>
+        <div className={`${styles.homeContainer}`}>
+          <div className={`${styles.heroSection}`}><Hero /></div>
+          <div className={`${styles.infoSection}`}><Info /></div>
+          <div className={`${styles.newsletterSection}`}><Newsletter theme={'dark'} /></div>
+          <div className={`${styles.faqSection}`}><FaqSection /></div>
+        </div>
       </div>
     </>
   )

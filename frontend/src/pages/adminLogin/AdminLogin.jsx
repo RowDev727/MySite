@@ -1,9 +1,8 @@
 import styles from './AdminLogin.module.css'
-import { useState, useEffect } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { object, string } from 'yup'
 import Newsletter from '../../components/newsletter/Newsletter'
-import Admin from '../admin/Admin'
 import useAuth from '../../hooks/useAuth'
 
 const AdminLogin = () => {
@@ -45,13 +44,12 @@ const AdminLogin = () => {
         fetch('/api/token', options)
         .then(res => {
           if (res.status === 200) return res.json()
-          else alert("Error!")
+          else alert("Invalid Creds")
         })
         .then(data => {
-          console.log(`access_token: ${data.access_token}`)
           const token = data.access_token
-          console.log(`token: ${token}`)
           setAuth({ token })
+          console.log('Token Granted!')
           
           setFormData({
             username: '',

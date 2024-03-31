@@ -1,4 +1,3 @@
 - Contact info (email, number, address)
 - Footer links
-- Authentication for admin panel
 - Transition / Scroll effect?

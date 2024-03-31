@@ -25,7 +25,7 @@ function App() {
   return (
   <div className={styles.appContainer}>
     
-    <Navbar title ={'RowdieDevs'} />
+    <Navbar title={'RowdieDevs'} />
     <Routes>
       {/* Public Routes */}
       <Route path='/' element={<Home/>}/>
@@ -33,7 +33,7 @@ function App() {
       <Route path='/about' element={<About/>}/>
       <Route path='/services' element={<Services/>}/>
       <Route path='/contact' element={<Contact/>}/>
-      <Route path='/adminLogin' element={<AdminLogin/>}/>
+      <Route path='/adminlogin' element={<AdminLogin/>}/>
       <Route path='*' element={<NotFound/>}/>
       {/* Protected Routes */}
       <Route element={<RequireAuth/>}>

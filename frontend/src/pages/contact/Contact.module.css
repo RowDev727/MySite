@@ -57,6 +57,7 @@
 .contactLeftText {
     margin-bottom: 1rem;
     width: 80%;
+    color: var(--color-grey-300);
 }
 
 .contactLeftInfo {

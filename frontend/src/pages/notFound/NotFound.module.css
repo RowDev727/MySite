@@ -9,6 +9,7 @@
 .notFoundPageComponent h1 {
     font-size: 8rem;
     margin-bottom: 2rem;
+    color: var(--color-primary-green);
 }
 
 .notFoundBtn {
