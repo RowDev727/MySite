@@ -5,7 +5,6 @@ import styles from './Home.module.css'
 import Hero from '../../components/hero/Hero'
 import Info from '../../components/info/Info'
 import Newsletter from '../../components/newsletter/Newsletter'
-import Test from '../../components/testing/Test'
 import FaqSection from '../../components/faqSection/FaqSection'
 
 const Home = () => {

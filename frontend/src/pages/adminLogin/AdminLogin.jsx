@@ -13,9 +13,7 @@ const AdminLogin = () => {
       password: ""
     })
 
-    const [user, setUser] = useState('')
     const [errors, setErrors] = useState({})
-    const [formValid, setFormValid] = useState(false)
 
     const navigate = useNavigate()
 
@@ -113,7 +111,6 @@ const AdminLogin = () => {
                     {errors.name && <div className={`${styles.adminLoginFormError}`}>{errors.password}</div>}              
               </div>
               <button className={`${styles.adminLoginFormSubmitBtn}`} type='submit'>Log in</button>
-              {/* {token && <span>Your logged in!</span>} */}
             </form>
           </div>
         </div>

@@ -14,7 +14,6 @@ const Info = () => {
                     <p className={`${styles.title2}`}>We develop the web!</p>
                     <p>Our team of web developers and engineer work closely with customers to build 100% tailored web applications.  We understand that building a web presence can be a daunting task and we're here to make that dream a reality by offering a variety of services to best fit our customers needs.  Contact us to schedule a consultation!</p>
                     <NavLink to={'/contact'} className={`${styles.infoBtn}`} >Get Started</NavLink>
-                    {/* <button className={`${styles.infoBtn}`}>Get Started</button> */}
                 </div>
             </div>
         </div>

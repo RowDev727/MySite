@@ -1,7 +1,6 @@
-import FaqCard from '../faqCard/FaqCard'
 import styles from './FaqSection.module.css'
+import FaqCard from '../faqCard/FaqCard'
 import { faqInfo } from '../../data/faqInfo'
-import { useState } from 'react'
 
 const FaqSection = () => {
   
@@ -15,13 +14,6 @@ const FaqSection = () => {
                   <div key={index}><FaqCard x={index} question={question} answer={answer}/></div>
               ))
             }
-            
-            {/* {
-                faqInfo.map(({question, answer, index}) => {
-                  console.log(index)
-                  return (<FaqCard index={index} question={question} answer={answer} toggleAnswer={toggleAnswer}/>)
-                })
-            } */}
         </div>
     </div>
   )

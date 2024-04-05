@@ -6,7 +6,6 @@ const Footer = () => {
     <div className={`${styles.footerContainer}`}>
       <div className={`${styles.footer}`}>
         <div className={`${styles.footerHeader}`}>
-          {/* <h1 className={`${styles.footerTitle}`}>RowdieDevs</h1> */}
           <NavLink className={`${styles.footerTitle}`} to={'/home'}>RowdieDevs</NavLink>
           <p className={`${styles.footerText}`}>Dedicated to providing our customers with exceptional software and exceptional service!</p>
         </div>
