@@ -9,7 +9,7 @@
     padding: 0 2rem 0 2rem;
 }
 
-.title {
+.titles {
     font-weight: 600;
     font-style: bold;
 }
@@ -58,4 +58,33 @@
     background: var(--color-primary-dark);
     color: var(--color-primary-green);
     border: 2px solid var(--color-primary-green);
+}
+
+
+/* Medium and Small Screens */
+@media screen and (max-width: 1024px) {
+    .heroContainer {
+        margin-top: 1rem;
+        padding: 0;
+    }
+
+    .title2 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .title2 {
+        font-size: 2.8rem;
+    }
+
+    .title3 {
+        font-size: 2rem;
+    }
+    .heroContainer span {
+        font-size: 2rem;
+    }
+
+    .title4 {
+        font-size: 1rem;
+    }
 }

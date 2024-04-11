@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Hero = () => {
   return (
-    <div className={`${styles.heroContainer} ${styles.title} ${'container'}`}>
+    <div className={`${styles.heroContainer} ${styles.titles} ${'container'}`}>
       <p className={`${styles.title1}`}>DEVELOP A WEB PRESENCE</p>
       <p className={`${styles.title2}`}>Grow your business.</p>
       <p className={`${styles.title3}`}>Dynamic, Scalable & Modern</p>

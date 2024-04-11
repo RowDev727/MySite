@@ -1,12 +1,9 @@
-/* .faqCardComponent {
-    background: var(--color-grey-100);
-} */
-
 .faqCard {
     border: 2px solid transparent;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 8px;
     background: var(--color-grey-100);
+    padding-right: 1rem;
 }
 
 .faqTop {
@@ -21,9 +18,7 @@
 
 .faqCard svg {
     font-size: 2.1rem;
-    /* margin: .5rem; */
     color: var(--color-primary-green);
-    /* border: 1px solid red; */
     justify-self: center;
     align-self: center;
     margin: .5rem 0 .5rem 1rem;
@@ -35,7 +30,6 @@
 
 .faqCard p {
     font-size: 1.3rem;
-    /* border: 1px solid blue; */
 }
 
 .hiddenAnswer {

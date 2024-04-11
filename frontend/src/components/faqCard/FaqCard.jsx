@@ -19,7 +19,7 @@ const FaqCard = ({x, question, answer}) => {
 
   return (
     <div className={`${styles.faqCardComponent}`}>
-        <div className={`${styles.faqCardContainer} container`}>
+        <div className={`${styles.faqCardContainer}`}>
             <div onClick={() => toggleAnswer(x)} className={`${styles.faqCard}`}>
               <div className={`${styles.faqTop}`}>
                 {isClicked === x ? <MdOutlineClose/> : <FaPlus/>}

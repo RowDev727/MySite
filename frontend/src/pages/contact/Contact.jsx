@@ -83,7 +83,7 @@ const Contact = () => {
   return (
     <>
       <div className={`${styles.contactPageComponent}`}>
-        <div className={`${styles.contactContainer} container`}>
+        <div className={`${styles.contactContainer}`}>
           <div className={`${styles.contactHeading}`}>
             <h3 className={`${styles.contactHeadingTitle}`}>Contact Us</h3>
             <h1>Get in Touch</h1>

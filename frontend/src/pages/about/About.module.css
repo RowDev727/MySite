@@ -1,11 +1,14 @@
 .aboutPageComponent {
     min-height: calc(100vh - 4rem);
     background: var(--color-primary-dark);
+    display: grid;
+    align-items: center;
+    justify-content: center;
 }
 
 .aboutContainer {
     margin-bottom: 4rem;
-    padding: 4rem 2rem 2rem 2rem;
+    padding: 2rem 0rem 2rem 0rem;
     
 }
 
@@ -13,8 +16,9 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 3rem;
-    /* border: 2px solid red; */
-    margin-top: 2rem;
+    margin-top: 4rem;
+    padding: 1rem;
+    width: 100%;
 }
 
 .aboutTitle {
@@ -36,7 +40,6 @@
 }
 
 .aboutLeftCol {
-    /* border: 2px solid red; */
     display: grid;
     padding: 1rem;
     align-items: space-between;
@@ -56,16 +59,54 @@
 
 .aboutRightCol {
     display: grid;
+    padding: 1rem
 }
 
 .aboutRightTitle {
     font-size: 2rem;
     color: var(--color-primary-green);
     margin-bottom: .5rem;
+    display: flex;
+    align-items: center;
+}
+
+.aboutRightTitle svg {
+    margin-right: 1rem;
 }
 
 .aboutRightText {
     font-size: 1rem;
     color: var(--color-grey-100);
     margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 935px) {
+    .aboutRow {
+        gap: 1rem;
+        grid-template-columns: 1fr;
+        margin-top: 1rem;
+    }
+    
+
+    .aboutLeftTitle {
+        text-align: center;
+    }
+
+    .aboutLeftText {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .aboutRow {
+        align-items: center;
+    }
+    
+    .aboutLeftTitle {
+        font-size: 2.5rem;
+    }
+
+    .aboutLeftText {
+        font-size: 1.2rem;
+    }
 }
